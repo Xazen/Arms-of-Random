@@ -3,16 +3,16 @@ using System.Collections;
 
 public class CreepCollision : MonoBehaviour {
 
-	CreepBase creepBase;
+	private CreepBase _creepBase;
 
 	void Awake()
 	{
+		_creepBase = GetComponent<CreepBase> ();
 	}
 
 	void OnCollisionEnter(Collision collision)
 	{
 		if(Tags.PROJECTILE == collision.gameObject.tag){
-
 		}
 	}
 }
