@@ -29,6 +29,4 @@ public class PlayerBase : MonoBehaviour
 			return _playerMovement;
 		}
 	}
-
-
 }
