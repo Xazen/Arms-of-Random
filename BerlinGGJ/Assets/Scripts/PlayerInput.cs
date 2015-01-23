@@ -3,11 +3,15 @@ using System.Collections;
 
 public class PlayerInput : MonoBehaviour {
 
-	delegate void InputDelegate();
+	public delegate void InputDelegate();
+	public delegate void InputDelegateWithValue(float value);
+
+	#pragma warning disable
 	private PlayerBase _playerBase;
+
 	public InputDelegate jump;
-	public InputDelegate right;
-	public InputDelegate left;
+	public InputDelegateWithValue moveHorizontal;
+	public InputDelegateWithValue moveVertical;
 
 	// Use this for initialization
 	void Start () {
@@ -21,14 +25,14 @@ public class PlayerInput : MonoBehaviour {
 			jump();
 		}
 
-		if (Input.GetButtonDown ("Right")) 
+		if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.0f) 
 		{
-			right();
+			moveHorizontal(Input.GetAxis("Horizontal"));
 		}
 
-		if (Input.GetButtonDown ("Left")) 
+		if (Mathf.Abs(Input.GetAxis("Vertical")) > 0.0f) 
 		{
-			left();
+			moveVertical(Input.GetAxis("Vertical"));
 		}
 	}
 }
