@@ -8,10 +8,22 @@ public class PlayerMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_playerBase = GetComponent<PlayerBase> ();
+		_playerBase.PlayerInput.jump += OnJump;
+		_playerBase.PlayerInput.right += OnRight;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	void OnJump ()
+	{
+
+	}
+
+	void OnRight()
+	{
+
 	}
 }
