@@ -23,16 +23,16 @@ public class PlayerMovement : MonoBehaviour {
 
 	void OnJump ()
 	{
-		Debug.Log("PressedJump");
+
 	}
 
 	void OnMove(float value)
 	{
-		Debug.Log("horizontal: " + value);
+
 	}
 
 	void OnVMove(float value)
 	{
-		Debug.Log("vertical: " + value);
+
 	}
 }
