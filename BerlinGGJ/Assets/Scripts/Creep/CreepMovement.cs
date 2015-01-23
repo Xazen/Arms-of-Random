@@ -3,13 +3,13 @@ using System.Collections;
 
 public class CreepMovement : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	CreepBase _creepBase;
+
+	void Start() {
+		_creepBase = GetComponent<CreepBase>();
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
-	
+
 	}
 }
