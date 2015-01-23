@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerBase : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+public class PlayerBase : MonoBehaviour 
+{
+	private static PlayerInput _playerInput;
+	public static PlayerInput playerInput
+	{
+		get
+		{
+			if (_playerInput == null)
+			{
+				_playerInput = GetComponent<PlayerInput>();
+			}
+		}
 	}
 }
