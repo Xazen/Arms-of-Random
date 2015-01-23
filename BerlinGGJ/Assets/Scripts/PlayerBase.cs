@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerBase : MonoBehaviour 
+public class PlayerBase : ActorBase 
 {
 	private PlayerInput _playerInput;
 	public PlayerInput PlayerInput
