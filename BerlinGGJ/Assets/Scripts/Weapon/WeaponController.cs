@@ -12,9 +12,9 @@ public class WeaponController : MonoBehaviour {
 	
 	void Update()
 	{
-		if (Input.GetKeyDown (KeyCode.Space))
+		if (Input.GetKeyDown (KeyCode.S))
 		{
-			attack(Random.Range(0,4));
+			attack(3);
 		}
 	}
 
@@ -39,7 +39,6 @@ public class WeaponController : MonoBehaviour {
 	void attack(int n)
 	{
 		GameObject projectile;
-		Debug.Log (n);
 		switch (n) {
 		// shot
 		case 0:

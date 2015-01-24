@@ -61,4 +61,8 @@ public class ActorHealth : MonoBehaviour {
 	{
 		decreaseHP (projectileBase.ProjectileProperties.damage);
 	}
+
+	void OnParticleCollision (GameObject gameObject ){
+		decreaseHP (1);
+	}
 }
