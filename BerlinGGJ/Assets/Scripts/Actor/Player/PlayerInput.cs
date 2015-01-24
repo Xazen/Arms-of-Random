@@ -48,15 +48,6 @@ public class PlayerInput : MonoBehaviour {
 			}
 		}
 
-		
-		if (Input.GetButtonUp ("Jump"))
-		{
-			if (jumpUp != null) 
-			{
-				jumpUp();
-			}
-		}
-
 		if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.0f) 
 		{
 			if (moveHorizontal != null)
