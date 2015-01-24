@@ -8,16 +8,8 @@ public class ActorController : MonoBehaviour {
 	public void Start()
 	{
 		_actorBase = GetComponent<ActorBase> ();
-//		_actorBase.ActorHealth.OnHealthChanged += OnHealthChanged;
 	}
 
-//	public void OnHealthChanged(float oldValue, float newValue)
-//	{
-//		if (newValue <= 0) 
-//		{
-//			Die();
-//		}
-//	}
 
 	public void Die()
 	{
