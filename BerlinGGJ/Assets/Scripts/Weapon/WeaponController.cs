@@ -14,7 +14,7 @@ public class WeaponController : MonoBehaviour {
 	{
 		if (Input.GetKeyDown (KeyCode.Space))
 		{
-			attack(Random.Range(0,3));
+			attack(Random.Range(0,4));
 		}
 	}
 
