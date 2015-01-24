@@ -10,4 +10,5 @@ public class Tags : MonoBehaviour {
 	public const string CAMERAHOLDER = "CameraHolder";
 	public const string GAMECONTROLLER = "GameController";
 	public const string FLOOR = "Floor";
+	public const string HEALTHBAR = "HealthBar";
 }
