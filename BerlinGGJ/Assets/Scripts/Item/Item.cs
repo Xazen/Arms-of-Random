@@ -19,6 +19,7 @@ public class Item : MonoBehaviour {
 		if (_itemBase.ItemProperty.CanUseItem ()) 
 		{
 			_itemBase.ItemProperty.DecreasePosessionCount();
+			_playerBase.WeaponController.OnAttack(_itemBase.ItemProperty.WeaponType);
 			Debug.Log("weapontype: " + _itemBase.ItemProperty.WeaponType);
 		}
 	}

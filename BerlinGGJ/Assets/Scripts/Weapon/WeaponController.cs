@@ -12,26 +12,31 @@ public class WeaponController : MonoBehaviour {
 	
 	void Update()
 	{
-		if (Input.GetKeyDown (KeyCode.S))
+		if (Input.GetKeyDown (KeyCode.Z))
+		{
+			attack(0);
+		}
+		if (Input.GetKeyDown (KeyCode.X))
+		{
+			attack(1);
+		}
+		if (Input.GetKeyDown (KeyCode.C))
+		{
+			attack(2);
+		}
+		if (Input.GetKeyDown (KeyCode.V))
 		{
 			attack(3);
 		}
+//		if (Input.GetKeyDown (KeyCode.B))
+//		{
+//			attack(4);
+//		}
 	}
 
-	public void OnAttack(ItemBase itemBase)
+	public void OnAttack(int weaponType)
 	{
-
-		// TODO implement correctly ...
-//				switch (itemBase.ItemProperty.WeaponType) {
-//				case 0:
-//					GameObject projectile = (GameObject) Instantiate(_projectile, transform.position, Quaternion.identity);
-//					projectile.transform.constantForce.force = Vector3.right * 100;
-//					projectile.transform.Translate( Vector3.forward );
-//					break;
-//
-//				default:
-//					break;
-//				}
+		attack (weaponType);
 
 	}
 
@@ -42,14 +47,14 @@ public class WeaponController : MonoBehaviour {
 		switch (n) {
 		// shot
 		case 0:
-			projectile = (GameObject) Instantiate(_projectile, transform.position + Vector3.right, Quaternion.identity);
+			projectile = (GameObject) Instantiate(_projectile, GameObject.Find("muzzle").transform.position, Quaternion.identity);
 			projectile.transform.constantForce.force = Vector3.right * 100;
 			projectile.transform.Translate( Vector3.forward );
 			break;
 		// throw
 		case 1:
-			projectile = (GameObject) Instantiate(_projectile, transform.position + Vector3.right, Quaternion.identity);
-			projectile.transform.constantForce.force = Vector3.right * 100 + Vector3.up * 100;
+			projectile = (GameObject) Instantiate(_projectile, GameObject.Find("muzzle").transform.position, Quaternion.identity);
+			projectile.transform.constantForce.force = Vector3.right * 50 + Vector3.up * 20;
 			projectile.transform.Translate( Vector3.forward );
 			break;
 		// flame thrower
@@ -67,6 +72,6 @@ public class WeaponController : MonoBehaviour {
 
 	public static int RandomWeaponType()
 	{
-		return Random.Range (0, 12);
+		return Random.Range (0, 4);
 	}
 }
