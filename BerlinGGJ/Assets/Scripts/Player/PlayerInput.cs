@@ -10,6 +10,7 @@ public class PlayerInput : MonoBehaviour {
 	private PlayerBase _playerBase;
 
 	public InputDelegate jump;
+	public InputDelegate attack;
 	public InputDelegateWithValue moveHorizontal;
 	public InputDelegateWithValue moveVertical;
 
@@ -33,6 +34,11 @@ public class PlayerInput : MonoBehaviour {
 		if (Mathf.Abs(Input.GetAxis("Vertical")) > 0.0f) 
 		{
 			moveVertical(Input.GetAxis("Vertical"));
+		}
+
+		if (Input.GetButtonDown ("Fire1")) 
+		{
+			attack();
 		}
 	}
 }
