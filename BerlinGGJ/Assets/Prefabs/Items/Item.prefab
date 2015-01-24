@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 11407406}
   - 114: {fileID: 11407404}
   - 114: {fileID: 11418342}
+  - 95: {fileID: 9531202}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -61,6 +62,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107404}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &9531202
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107404}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4177f9118cd7824f99f77fcaff2cb1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11407404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,7 +110,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 107404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812eee7081b9c614b98a47915d0f9a39, type: 3}
+  m_Script: {fileID: 11500000, guid: d1a0cae36e1f1594bb348a3cb1a39390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11418342
@@ -108,6 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4203c32a08e305d49b789db29be11784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spinningSpeed: 10
+  respawnTime: 10
 --- !u!136 &13607404
 CapsuleCollider:
   m_ObjectHideFlags: 1

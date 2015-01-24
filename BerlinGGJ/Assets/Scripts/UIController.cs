@@ -79,7 +79,6 @@ public class UIController : MonoBehaviour
 	void syncInventory()
 	{
 		List<ItemBase> itemBaseList = _playerBase.PlayerInventory.ItemBaseList();
-		Debug.Log ("sync itemBaseList.Count: " + itemBaseList.Count);
 		for (int i = 0; i < _playerBase.PlayerInventory.MaximumNumberOfItems() ; i++) {
 			if(itemBaseList.Count> i){
 				gameUI.transform.Find("Canvas/ItemSlot" + i).GetComponent<RawImage>().texture = itemBaseList[i].ItemProperty.SlotImage();

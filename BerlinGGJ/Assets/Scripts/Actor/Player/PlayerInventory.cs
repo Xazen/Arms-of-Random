@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -22,10 +22,11 @@ public class PlayerInventory : MonoBehaviour {
 
 	public void OnItemCollision(ItemBase itemBase)
 	{
-		if (!IsFull()) 
+		if (!IsFull() && !_itemList.Contains(itemBase)) 
 		{
 			itemBase.ItemProperty.WeaponType = WeaponController.RandomWeaponType ();
 			_itemList.Add (itemBase);
+			itemBase.ItemProperty.ResetPosessionCount();
 			if (OnInventoryAdded != null)
 			{
 				OnInventoryAdded(itemBase);
@@ -39,7 +40,7 @@ public class PlayerInventory : MonoBehaviour {
 		if (_itemList.Count > index) 
 		{
 			ItemBase itemBase = _itemList[index];
-			itemBase.Item.Use();
+			itemBase.ItemController.Use();
 			itemBase.ItemProperty.DecreasePosessionCount();
 
 			if (OnInventoryUsed != null)
@@ -54,7 +55,7 @@ public class PlayerInventory : MonoBehaviour {
 				{
 					OnInventoryRemoved(itemBase);
 				}
-				Destroy(itemBase.gameObject);
+				//Destroy(itemBase.gameObject);
 			}
 		}
 	}
