@@ -5,7 +5,7 @@ public class CameraMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerMovement> ().OnPositionChanged += OnPlayerPositionChanged;
+		GameObject.FindGameObjectWithTag (Tags.PLAYER).GetComponent<PlayerMovement> ().OnPositionChanged += OnPlayerPositionChanged;
 	}
 	
 	// Update is called once per frame
