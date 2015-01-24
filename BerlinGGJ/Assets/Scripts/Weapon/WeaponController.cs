@@ -3,10 +3,11 @@ using System.Collections;
 
 public class WeaponController : MonoBehaviour {
 
+	[SerializeField] private GameObject _projectile;
 	PlayerBase _playerBase;
 
 	void Start () {
-		_playerBase = GetComponent<PlayerBase>();
+		_playerBase = GameObject.FindGameObjectWithTag(Tags.PLAYER).GetComponent<PlayerBase>();
 		_playerBase.PlayerInput.attack += OnAttack;
 	}
 
@@ -14,12 +15,9 @@ public class WeaponController : MonoBehaviour {
 	{
 		if(attackType == 101)
 		{
-			GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-			cube.AddComponent<Rigidbody>();
-			cube.transform.position = transform.position;
-			cube.AddComponent<ConstantForce>();
-			cube.transform.constantForce.force = Vector3.right * 100;
-			cube.transform.Translate( Vector3.forward );
+			GameObject projectile = (GameObject) Instantiate(_projectile, transform.position, Quaternion.identity);
+			projectile.transform.constantForce.force = Vector3.right * 100;
+			projectile.transform.Translate( Vector3.forward );
 		}
 	}
 }
