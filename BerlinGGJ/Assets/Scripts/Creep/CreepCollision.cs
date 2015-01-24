@@ -17,4 +17,8 @@ public class CreepCollision : MonoBehaviour {
 //			_creepBase.ActorHealth
 		}
 	}
+
+	void OnParticleCollision (Collision collision ){
+		Debug.Log("yay");
+	}
 }
