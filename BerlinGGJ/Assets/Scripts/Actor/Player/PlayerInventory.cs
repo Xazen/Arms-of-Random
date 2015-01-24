@@ -17,7 +17,7 @@ public class PlayerInventory : MonoBehaviour {
 
 	public void OnItemCollision(ItemBase itemBase)
 	{
-		if (!IsFull) 
+		if (!IsFull()) 
 		{
 			itemBase.ItemProperty.WeaponType = WeaponController.RandomWeaponType ();
 			_itemList.Add (itemBase);
