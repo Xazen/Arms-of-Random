@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Item : MonoBehaviour {
@@ -16,9 +16,9 @@ public class Item : MonoBehaviour {
 
 	public void use()
 	{
-		if (_itemBase.ItemProperty.canUseItem ()) 
+		if (_itemBase.ItemProperty.CanUseItem ()) 
 		{
-			_itemBase.ItemProperty.decreasePosessionCount();
+			_itemBase.ItemProperty.DecreasePosessionCount();
 
 		}
 	}
