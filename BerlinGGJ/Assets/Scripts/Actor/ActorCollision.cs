@@ -8,9 +8,6 @@ public class ActorCollision : MonoBehaviour {
 	
 	public void OnCollisionEnter (Collision collision)
 	{
-		if (this.gameObject.tag == Tags.PLAYER) {
-			Debug.Log ("actorcollision called in player");
-				}
 		if (collision.gameObject.tag == Tags.PROJECTILE)
 		{
 			if (projectileCollision != null)
