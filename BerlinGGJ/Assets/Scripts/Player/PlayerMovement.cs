@@ -23,12 +23,12 @@ public class PlayerMovement : MonoBehaviour {
 
 	void OnJump ()
 	{
-
+		_playerBase.ActorHealth.decreaseHP (1.0f);
 	}
 
 	void OnMove(float value)
 	{
-
+		_playerBase.ActorHealth.resetHP();
 	}
 
 	void OnVMove(float value)
