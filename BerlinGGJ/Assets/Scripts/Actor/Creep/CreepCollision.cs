@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CreepCollision : MonoBehaviour {
+public class CreepCollision : ActorCollision {
 	
 	CreepBase _creepBase;
 
@@ -13,5 +13,10 @@ public class CreepCollision : MonoBehaviour {
 	void OnParticleCollision (GameObject gameObject )
 	{
 		//TODO implement
+	}
+
+	void OnCollisionEnter (Collision collision)
+	{
+		base.OnCollisionEnter (collision);
 	}
 }

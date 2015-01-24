@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CreepController : MonoBehaviour {
+public class CreepController : ActorController {
 
 	[SerializeField]
 	float horizontalMovement = 0f;
@@ -10,7 +10,17 @@ public class CreepController : MonoBehaviour {
 
 	public MovementDelegateWithValue moveHorizontal;
 
+	void Start()
+	{
+		base.Start ();
+	}
+
 	void Update() {
 		moveHorizontal(horizontalMovement);
+	}
+
+	void Die()
+	{
+		base.Die ();
 	}
 }

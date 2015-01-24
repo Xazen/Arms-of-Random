@@ -5,13 +5,13 @@ public class ActorController : MonoBehaviour {
 
 	private ActorBase _actorBase;
 
-	void Start()
+	public void Start()
 	{
 		_actorBase = GetComponent<ActorBase> ();
 		_actorBase.ActorHealth.OnHealthChanged += OnHealthChanged;
 	}
 
-	void OnHealthChanged(float oldValue, float newValue)
+	public void OnHealthChanged(float oldValue, float newValue)
 	{
 		if (newValue <= 0) 
 		{
@@ -19,7 +19,7 @@ public class ActorController : MonoBehaviour {
 		}
 	}
 
-	void Die()
+	public void Die()
 	{
 		Destroy (this.gameObject);
 	}
