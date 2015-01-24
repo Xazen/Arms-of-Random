@@ -56,6 +56,20 @@ public class PlayerBase : ActorBase
 		}
 	}
 
+	
+	private PlayerVisual _playerVisual;
+	public PlayerVisual PlayerVisual
+	{
+		get
+		{
+			if (_playerVisual == null)
+			{
+				_playerVisual = GetComponent<PlayerVisual>();
+			}
+			return _playerVisual;
+		}
+	}
+
 	private WeaponController _weaponController;
 	public WeaponController WeaponController
 	{

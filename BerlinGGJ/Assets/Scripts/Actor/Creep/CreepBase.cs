@@ -33,6 +33,21 @@ public class CreepBase : ActorBase {
 		}
 	}
 
+	private CreepVisual _creepVisual;
+	
+	public CreepVisual CreepVisual
+	{
+		get
+		{
+			if (_creepVisual == null)
+			{
+				_creepVisual = GetComponent<CreepVisual>();
+			}
+			
+			return _creepVisual;
+		}
+	}
+
 	private CreepCollision _creepCollision;
 
 	public CreepCollision CreepCollision
