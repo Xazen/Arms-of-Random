@@ -26,10 +26,14 @@ GameObject:
   m_Component:
   - 4: {fileID: 445290}
   - 95: {fileID: 9545288}
-  - 114: {fileID: 11445290}
-  - 114: {fileID: 11445288}
   - 54: {fileID: 5445288}
   - 65: {fileID: 6545288}
+  - 114: {fileID: 11411902}
+  - 114: {fileID: 11411900}
+  - 114: {fileID: 11411898}
+  - 114: {fileID: 11411896}
+  - 114: {fileID: 11445288}
+  - 114: {fileID: 11445290}
   m_Layer: 0
   m_Name: Creep
   m_TagString: Creep
@@ -55,8 +59,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145290}
-  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -7.19999981, y: 1, z: 0}
+  m_LocalRotation: {x: 0, y: -.707106888, z: 0, w: .707106769}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 410960}
@@ -102,7 +106,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 6
+  m_Constraints: 2
   m_CollisionDetection: 0
 --- !u!65 &6545288
 BoxCollider:
@@ -131,7 +135,7 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11445288
+--- !u!114 &11411896
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -142,9 +146,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78ab4d2e36594565a273136e5aed6a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11445290
+--- !u!114 &11411898
 MonoBehaviour:
   m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5a4ee5059984e37aef0f2b01161411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11411900
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96bb8a14d412a43909e61ccea9689228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11411902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76719d78b77bb4d9680db3b63b7bd440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalMovement: .300000012
+--- !u!114 &11445288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a78ab4d2e36594565a273136e5aed6a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11445290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145290}
