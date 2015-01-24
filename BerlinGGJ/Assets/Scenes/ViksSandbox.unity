@@ -135,7 +135,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Continue
 --- !u!222 &776377
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1441,6 +1441,14 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 858646308}
+    - target: {fileID: 11430242, guid: 7da68239536e7a243b80d130b17d5dc3, type: 2}
+      propertyPath: m_Text
+      value: Continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 11430244, guid: 7da68239536e7a243b80d130b17d5dc3, type: 2}
+      propertyPath: m_Text
+      value: Restart
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7da68239536e7a243b80d130b17d5dc3, type: 2}
   m_RootGameObject: {fileID: 1267599559}
@@ -1674,7 +1682,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Restart
 --- !u!222 &217189900
 CanvasRenderer:
   m_ObjectHideFlags: 0
