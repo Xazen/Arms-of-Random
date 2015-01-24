@@ -63,7 +63,8 @@ public class ActorHealth : MonoBehaviour {
 	}
 
 	void OnParticleCollision (GameObject gameObject ){
-		GameObject.FindWithTag(Tags.CAMERAHOLDER).GetComponent<CameraRumbler>().rumble(0.1f, 0.2f);
+		// FIXME interfering with the movement camera...
+//		GameObject.FindWithTag(Tags.CAMERAHOLDER).GetComponent<CameraRumbler>().rumble(0.1f, 0.2f);
 		decreaseHP (2);
 	}
 }
