@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour {
 	bool inAir = false;
 	bool secondJump = true;
 
+	bool goingLeft = true;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -65,6 +67,22 @@ public class PlayerMovement : MonoBehaviour {
 		Vector3 newPosition = transform.position;
 		newPosition.x += _speed * Time.deltaTime * value;
 		transform.position = newPosition;
+
+		if(value<0)
+		{
+			if(goingLeft)
+			{
+				transform.Rotate(0,180,0);
+			}
+			goingLeft = false;
+		}else {
+
+			if(!goingLeft)
+			{
+				transform.Rotate(0,180,0);
+			}
+			goingLeft = true;
+		}
 
 		if (OnPositionChanged != null)
 		{
