@@ -33,8 +33,8 @@ public class PlayerInventory : MonoBehaviour {
 		if (_itemList.Count > index-1) 
 		{
 			ItemBase itemBase = _itemList[index-1];
-			itemBase.ItemProperty.DecreasePosessionCount();
 			itemBase.Item.Use();
+			itemBase.ItemProperty.DecreasePosessionCount();
 			if (!itemBase.ItemProperty.CanUseItem())
 			{
 				_itemList.RemoveAt(index-1);

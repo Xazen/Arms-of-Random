@@ -20,16 +20,14 @@ public class Item : MonoBehaviour {
 		{
 			_itemBase.ItemProperty.DecreasePosessionCount();
 			Debug.Log("weapontype: " + _itemBase.ItemProperty.WeaponType);
-			_playerBase.WeaponController.OnAttack(_itemBase);
-			
 		}
 	}
 
 	public void OnPlayerCollision(ItemBase itemBase)
 	{
 		Debug.Log ("Delete item");
-		_itemBase.ItemVisual.Remove ();
-		this.renderer.enabled = false;
-		this.collider.enabled = false;
+		itemBase.ItemVisual.Remove ();
+		itemBase.gameObject.renderer.enabled = false;
+		itemBase.gameObject.collider.enabled = false;
 	}
 }
