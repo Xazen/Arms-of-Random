@@ -20,6 +20,8 @@ public class WeaponController : MonoBehaviour {
 
 	public void OnAttack(ItemBase itemBase)
 	{
+
+		// TODO implement correctly ...
 //				switch (itemBase.ItemProperty.WeaponType) {
 //				case 0:
 //					GameObject projectile = (GameObject) Instantiate(_projectile, transform.position, Quaternion.identity);
@@ -36,15 +38,28 @@ public class WeaponController : MonoBehaviour {
 
 	void attack(int n)
 	{
+		GameObject projectile;
 		Debug.Log (n);
 		switch (n) {
+		// shot
 		case 0:
-			GameObject projectile = (GameObject) Instantiate(_projectile, transform.position, Quaternion.identity);
+			projectile = (GameObject) Instantiate(_projectile, transform.position + Vector3.right, Quaternion.identity);
 			projectile.transform.constantForce.force = Vector3.right * 100;
 			projectile.transform.Translate( Vector3.forward );
 			break;
+		// throw
 		case 1:
+			projectile = (GameObject) Instantiate(_projectile, transform.position + Vector3.right, Quaternion.identity);
+			projectile.transform.constantForce.force = Vector3.right * 100 + Vector3.up * 100;
+			projectile.transform.Translate( Vector3.forward );
+			break;
+		// flame thrower
+		case 2:
 			GameObject.Find("muzzle/fire_spray").GetComponent<ParticleSystem>().Play(); 
+			break;
+		// rocket launcher
+		case 3:
+			GameObject.Find("muzzle/rocket_launcher").GetComponent<ParticleSystem>().Play(); 
 			break;
 		default:
 			break;
