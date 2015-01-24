@@ -7,7 +7,7 @@ public class CreepController : MonoBehaviour {
 
 	public MovementDelegateWithValue moveHorizontal;
 	
-	void Upate() {
+	void Update() {
 		moveHorizontal(0.1f);
 	}
 }
