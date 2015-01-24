@@ -9,11 +9,15 @@ public class PlayerCollision : ActorCollision {
 	public void OnCollisionEnter(Collision collision)
 	{
 		base.OnCollisionEnter (collision);
-		if (collision.gameObject.tag == Tags.ITEM) 
+	}
+
+	public void OnTriggerEnter (Collider collider)
+	{
+		if (collider.gameObject.tag == Tags.ITEM) 
 		{
 			if (itemCollision != null)
 			{
-				itemCollision(collision.gameObject.GetComponent<ItemBase>());
+				itemCollision(collider.gameObject.GetComponent<ItemBase>());
 			}
 		}
 	}
