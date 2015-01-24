@@ -23,12 +23,12 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		_playerBase = GetComponent<PlayerBase> ();
 		_playerBase.PlayerInput.jumpDown += OnJumpDown;
-		_playerBase.PlayerInput.jumpUp += OnJumpUp;
 		_playerBase.PlayerInput.moveHorizontal += OnMove;
 	}
 
-	void Update(){
-		if(_playerBase.ActorCollision.OnFloor())
+	void Update()
+	{
+		if(transform.position.y < 1)
 		{
 			inAir = false;
 		}else{
@@ -47,12 +47,6 @@ public class PlayerMovement : MonoBehaviour {
 			jump();
 			secondJump = false;
 		}
-	}
-
-	void OnJumpUp()
-	{
-
-		// TODO necessary
 	}
 
 	void jump ()
