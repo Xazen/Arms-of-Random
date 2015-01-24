@@ -3,13 +3,15 @@ using System.Collections;
 
 public class CreepMovement : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	CreepBase _creepBase;
+
+	void Start() {
+		_creepBase = GetComponent<CreepBase>();
+		_creepBase.CreepController.moveHorizontal += OnMove;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void OnMove(float value)
+	{
+		transform.Translate( Vector3.forward);
 	}
 }

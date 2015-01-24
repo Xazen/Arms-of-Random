@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Tags : MonoBehaviour {
 	public const string PROJECTILE = "Projectile";
+	public const string CREEP = "Creep";
 	public const string ITEM = "Item";
 	public const string PLAYER = "Player";
 }
