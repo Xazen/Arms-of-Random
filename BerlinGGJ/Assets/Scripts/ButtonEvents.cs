@@ -6,7 +6,8 @@ public class ButtonEvents : MonoBehaviour
 
 	public void StartOnClick()
 	{
-		Debug.LogWarning( "Start" );
+
+		Application.LoadLevel("Main");
 	}
 
 	
