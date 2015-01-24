@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
@@ -29,8 +29,14 @@ public class PlayerMovement : MonoBehaviour {
 		_playerBase.PlayerInput.moveHorizontal += OnMove;
 	}
 
+<<<<<<< HEAD
 	void Update(){
 		if(_playerBase.ActorCollision.OnFloor())
+=======
+	void Update()
+	{
+		if(transform.position.y < 1)
+>>>>>>> LevelDesign
 		{
 			inAir = false;
 		}else{
@@ -49,6 +55,12 @@ public class PlayerMovement : MonoBehaviour {
 			jump();
 			secondJump = false;
 		}
+	}
+
+	void OnJumpUp()
+	{
+
+		// TODO necessary
 	}
 
 	void jump ()
