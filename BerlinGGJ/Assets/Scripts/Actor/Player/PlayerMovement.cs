@@ -13,13 +13,19 @@ public class PlayerMovement : MonoBehaviour {
 	void Start () 
 	{
 		_playerBase = GetComponent<PlayerBase> ();
-		_playerBase.PlayerInput.jump += OnJump;
+		_playerBase.PlayerInput.jumpDown += OnJumpDown;
+		_playerBase.PlayerInput.jumpUp += OnJumpUp;
 		_playerBase.PlayerInput.moveHorizontal += OnMove;
 	}
 
-	void OnJump ()
+	void OnJumpDown ()
 	{
-		
+		Debug.Log("Jump!!");
+	}
+
+	void OnJumpUp()
+	{
+		Debug.Log ("JumpUp!!");
 	}
 
 	void OnMove(float value)

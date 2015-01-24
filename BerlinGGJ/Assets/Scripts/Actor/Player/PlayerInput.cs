@@ -10,7 +10,8 @@ public class PlayerInput : MonoBehaviour {
 	#pragma warning disable
 	private PlayerBase _playerBase;
 
-	public InputDelegate jump;
+	public InputDelegate jumpDown;
+	public InputDelegate jumpUp;
 	public InputDelegateWithInteger attack;
 	public InputDelegateWithValue moveHorizontal;
 	public InputDelegateWithValue moveVertical;
@@ -38,12 +39,21 @@ public class PlayerInput : MonoBehaviour {
 		{
 			number(3);
 		}
-
+		
 		if (Input.GetButtonDown ("Jump"))
 		{
-			if (jump != null) 
+			if (jumpDown != null) 
 			{
-				jump();
+				jumpDown();
+			}
+		}
+
+		
+		if (Input.GetButtonUp ("Jump"))
+		{
+			if (jumpUp != null) 
+			{
+				jumpUp();
 			}
 		}
 
