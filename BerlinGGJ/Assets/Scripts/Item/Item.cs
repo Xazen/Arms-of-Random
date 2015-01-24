@@ -19,6 +19,7 @@ public class Item : MonoBehaviour {
 		if (_itemBase.ItemProperty.CanUseItem ()) 
 		{
 			_itemBase.ItemProperty.DecreasePosessionCount();
+			_playerBase.WeaponController.OnAttack(_itemBase.ItemProperty.WeaponType);
 			Debug.Log("weapontype: " + _itemBase.ItemProperty.WeaponType);
 		}
 	}
@@ -26,8 +27,11 @@ public class Item : MonoBehaviour {
 	public void OnPlayerCollision(ItemBase itemBase)
 	{
 		Debug.Log ("Delete item");
-		itemBase.ItemVisual.Remove ();
-		itemBase.gameObject.renderer.enabled = false;
-		itemBase.gameObject.collider.enabled = false;
+		if (!_playerBase.PlayerInventory.IsFull ()) 
+		{
+			itemBase.ItemVisual.Remove ();
+			itemBase.gameObject.renderer.enabled = false;
+			itemBase.gameObject.collider.enabled = false;
+		}
 	}
 }

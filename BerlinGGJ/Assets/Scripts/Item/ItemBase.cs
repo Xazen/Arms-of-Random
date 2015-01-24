@@ -41,17 +41,4 @@ public class ItemBase : MonoBehaviour {
 			return _itemVisual;
 		}
 	}
-
-	private ItemCollision _itemCollision;
-	public ItemCollision ItemCollision
-	{
-		get 
-		{
-			if (_itemCollision == null)
-			{
-				_itemCollision = GetComponent<ItemCollision>();
-			}
-			return _itemCollision;
-		}
-	}
 }

@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void Update(){
-		if(transform.position.y < 1)
+		if(_playerBase.ActorCollision.OnFloor())
 		{
 			inAir = false;
 		}else{

@@ -5,6 +5,8 @@ public class ActorCollision : MonoBehaviour {
 
 	public delegate void CollisionDelegate(ProjectileBase projectileBase);
 	public CollisionDelegate projectileCollision;
+
+	private bool onFloor;
 	
 	public void OnCollisionEnter (Collision collision)
 	{
@@ -16,5 +18,18 @@ public class ActorCollision : MonoBehaviour {
 				projectileCollision(projectileBase);
 			}
 		}
+
+		if(collision.gameObject.tag == Tags.FLOOR)
+		{
+			onFloor = true;
+		}else{
+			onFloor = false;
+		}
+	}
+
+	public bool OnFloor()
+	{
+		Debug.Log (onFloor);
+		return onFloor;
 	}
 }
