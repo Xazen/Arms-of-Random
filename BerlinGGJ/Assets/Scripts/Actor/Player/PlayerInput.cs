@@ -62,13 +62,5 @@ public class PlayerInput : MonoBehaviour {
 				moveVertical (Input.GetAxis ("Vertical"));
 			}
 		}
-
-		if (Input.GetButtonDown ("Fire1")) 
-		{
-			if (attack != null) 
-			{
-				attack(101);
-			}
-		}
 	}
 }

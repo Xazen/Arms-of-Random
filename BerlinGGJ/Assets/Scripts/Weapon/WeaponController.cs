@@ -8,16 +8,20 @@ public class WeaponController : MonoBehaviour {
 
 	void Start () {
 		_playerBase = GameObject.FindGameObjectWithTag(Tags.PLAYER).GetComponent<PlayerBase>();
-		_playerBase.PlayerInput.attack += OnAttack;
 	}
 
-	void OnAttack(int attackType)
+	void OnAttack(ItemBase itemBase)
 	{
-		if(attackType == 101)
+		if(true)
 		{
 			GameObject projectile = (GameObject) Instantiate(_projectile, transform.position, Quaternion.identity);
 			projectile.transform.constantForce.force = Vector3.right * 100;
 			projectile.transform.Translate( Vector3.forward );
 		}
+	}
+
+	public static int RandomWeaponType()
+	{
+		return Random.Range (0, 12);
 	}
 }
