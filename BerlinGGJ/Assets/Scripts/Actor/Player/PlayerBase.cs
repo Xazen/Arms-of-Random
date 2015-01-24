@@ -55,4 +55,17 @@ public class PlayerBase : ActorBase
 			return _playerInventory;
 		}
 	}
+
+	private WeaponController _weaponController;
+	public WeaponController WeaponController
+	{
+		get
+		{
+			if (_weaponController == null)
+			{
+				_weaponController = GetComponent<WeaponController>();
+			}
+			return _weaponController;
+		}
+	}
 }
