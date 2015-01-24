@@ -21,20 +21,31 @@ public class PlayerInventory : MonoBehaviour {
 		{
 			itemBase.ItemProperty.WeaponType = WeaponController.RandomWeaponType ();
 			_itemList.Add (itemBase);
+			Debug.Log("Item collected: " + _itemList);
+			Debug.Log("item list count: " + _itemList.Count);
 		}
 	}
 
 	public void ItemSelectedWithIndex(int index)
 	{
-		if (_itemList.Count >= index) 
+		Debug.Log("Should use item with index: " + (index-1));
+		Debug.Log("item list count: " + _itemList.Count);
+		if (_itemList.Count > index-1) 
 		{
-			ItemBase itemBase = _itemList[index];
-			_itemList.RemoveAt(index);
+			ItemBase itemBase = _itemList[index-1];
+			itemBase.Item.Use();
+			itemBase.ItemProperty.DecreasePosessionCount();
+			if (!itemBase.ItemProperty.CanUseItem())
+			{
+				_itemList.RemoveAt(index-1);
+				Debug.Log("Item removed");
+			}
+			Debug.Log("Item used: " + _itemList);
 		}
 	}
 
 	public bool IsFull()
 	{
-		return (_itemList.Count < _maxNumberOfItems);
+		return (_itemList.Count >= _maxNumberOfItems);
 	}
 }

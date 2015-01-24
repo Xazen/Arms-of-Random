@@ -14,20 +14,20 @@ public class Item : MonoBehaviour {
 		_playerBase.PlayerCollision.itemCollision += OnPlayerCollision;
 	}
 
-	public void use()
+	public void Use()
 	{
 		if (_itemBase.ItemProperty.CanUseItem ()) 
 		{
 			_itemBase.ItemProperty.DecreasePosessionCount();
-			_playerBase.WeaponController.OnAttack(_itemBase);
-	
+			Debug.Log("weapontype: " + _itemBase.ItemProperty.WeaponType);
 		}
 	}
 
 	public void OnPlayerCollision(ItemBase itemBase)
 	{
 		Debug.Log ("Delete item");
-		_itemBase.ItemVisual.Remove ();
-		Destroy (this.gameObject);
+		itemBase.ItemVisual.Remove ();
+		itemBase.gameObject.renderer.enabled = false;
+		itemBase.gameObject.collider.enabled = false;
 	}
 }
