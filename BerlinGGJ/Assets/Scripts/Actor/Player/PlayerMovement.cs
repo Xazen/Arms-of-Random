@@ -23,11 +23,11 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		_playerBase = GetComponent<PlayerBase> ();
 		_playerBase.PlayerInput.jumpDown += OnJumpDown;
-		_playerBase.PlayerInput.jumpUp += OnJumpUp;
 		_playerBase.PlayerInput.moveHorizontal += OnMove;
 	}
 
-	void Update(){
+	void Update()
+	{
 		if(transform.position.y < 1)
 		{
 			inAir = false;
@@ -47,12 +47,6 @@ public class PlayerMovement : MonoBehaviour {
 			jump();
 			secondJump = false;
 		}
-	}
-
-	void OnJumpUp()
-	{
-
-		// TODO necessary
 	}
 
 	void jump ()

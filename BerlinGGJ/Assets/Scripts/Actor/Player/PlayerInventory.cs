@@ -17,7 +17,7 @@ public class PlayerInventory : MonoBehaviour {
 	void Start () {
 		_playerBase = GetComponent<PlayerBase> ();
 		_playerBase.PlayerCollision.itemCollision += OnItemCollision;
-		_playerBase.PlayerInput.number += ItemSelectedWithIndex;
+		_playerBase.PlayerInput.number += ItemUsedWithNumber;
 	}
 
 	public void OnItemCollision(ItemBase itemBase)
@@ -30,18 +30,15 @@ public class PlayerInventory : MonoBehaviour {
 			{
 				OnInventoryAdded(itemBase);
 			}
-			Debug.Log("Item collected: " + _itemList);
-			Debug.Log("item list count: " + _itemList.Count);
 		}
 	}
 
-	public void ItemSelectedWithIndex(int index)
+	public void ItemUsedWithNumber(int number)
 	{
-//		Debug.Log("Should use item with index: " + (index-1));
-		Debug.Log("item list count: " + _itemList.Count);
-		if (_itemList.Count > index-1) 
+		int index = number - 1;
+		if (_itemList.Count > index) 
 		{
-			ItemBase itemBase = _itemList[index-1];
+			ItemBase itemBase = _itemList[index];
 			itemBase.Item.Use();
 			itemBase.ItemProperty.DecreasePosessionCount();
 
@@ -52,15 +49,13 @@ public class PlayerInventory : MonoBehaviour {
 
 			if (!itemBase.ItemProperty.CanUseItem())
 			{
-				_itemList.RemoveAt(index-1);
+				_itemList.RemoveAt(index);
 				if (OnInventoryRemoved != null)
 				{
 					OnInventoryRemoved(itemBase);
 				}
 				Destroy(itemBase.gameObject);
-				Debug.Log("Item removed");
 			}
-			Debug.Log("Item used: " + _itemList);
 		}
 	}
 
