@@ -2,7 +2,29 @@ fileFormatVersion: 2
 guid: 4fd51eb20a437b64fa6db5e73b045036
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerWalk: {fileID: 8300000, guid: 6800b3157c52839448b9ca89cb943847, type: 3}
+  - playerJump: {fileID: 8300000, guid: 3f3ee70f6d620cc40b2cb50ad8ee8bcb, type: 3}
+  - playerLanding: {instanceID: 0}
+  - playerDeath: {instanceID: 0}
+  - projectile1: {instanceID: 0}
+  - projectile2: {instanceID: 0}
+  - projectile3: {instanceID: 0}
+  - projectile4: {instanceID: 0}
+  - projectile5: {instanceID: 0}
+  - enemyWalk: {instanceID: 0}
+  - enemyJump: {instanceID: 0}
+  - enemyShoot: {instanceID: 0}
+  - enemyDeath: {instanceID: 0}
+  - bossWalk: {instanceID: 0}
+  - bossShoot1: {instanceID: 0}
+  - bossShoot2: {instanceID: 0}
+  - bossScream: {instanceID: 0}
+  - bossAmbient: {instanceID: 0}
+  - bossDeath: {instanceID: 0}
+  - itemDrop: {instanceID: 0}
+  - itemCollect: {instanceID: 0}
+  - buttonClick: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
