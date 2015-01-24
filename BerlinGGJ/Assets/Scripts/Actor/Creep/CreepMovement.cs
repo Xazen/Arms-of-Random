@@ -12,6 +12,11 @@ public class CreepMovement : MonoBehaviour {
 
 	void OnMove(float value)
 	{
-		transform.Translate( Vector3.forward * value);
+		transform.Translate( Vector3.back * value);
+	}
+
+	public void StopMove()
+	{
+		_creepBase.CreepController.moveHorizontal -= OnMove;
 	}
 }
