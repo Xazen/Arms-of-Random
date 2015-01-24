@@ -8,7 +8,6 @@ public class WeaponController : MonoBehaviour {
 
 	void Start () {
 		_playerBase = GameObject.FindGameObjectWithTag(Tags.PLAYER).GetComponent<PlayerBase>();
-		_playerBase.PlayerInput.attack += OnAttack;
 	}
 
 	void OnAttack(ItemBase itemBase)
