@@ -37,7 +37,7 @@ public class PlayerInventory : MonoBehaviour {
 
 	public void ItemSelectedWithIndex(int index)
 	{
-		Debug.Log("Should use item with index: " + (index-1));
+//		Debug.Log("Should use item with index: " + (index-1));
 		Debug.Log("item list count: " + _itemList.Count);
 		if (_itemList.Count > index-1) 
 		{
@@ -62,6 +62,16 @@ public class PlayerInventory : MonoBehaviour {
 			}
 			Debug.Log("Item used: " + _itemList);
 		}
+	}
+
+	public List<ItemBase> ItemBaseList()
+	{
+		return _itemList;
+	}
+
+	public int MaximumNumberOfItems()
+	{
+		return _maxNumberOfItems;
 	}
 
 	public bool IsFull()

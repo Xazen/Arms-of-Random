@@ -1,4 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+
 
 public class UIController : MonoBehaviour
 {
@@ -24,14 +28,33 @@ public class UIController : MonoBehaviour
 	GameObject Menu;
 	GameObject ContinueB;
 	GameObject RestartB;
+
+	[SerializeField]
+	Texture emptySlot;
+
+	GameObject gameUI;
 	
-	
-	void Awake()
+	PlayerBase _playerBase;
+
+	bool[] slotStatus;
+	int slotCount;
+
+	void Start()
 	{
 		if( Menu == null ) Menu = GameObject.Find("EscapeMenu");
 		ContinueB = Menu.transform.Find("Canvas/ContinueButton").gameObject;
 		RestartB = Menu.transform.Find("Canvas/RestartButton").gameObject;
 		Menu.SetActive( false );
+
+		for (int i = 0; i < slotCount; i++) {
+			slotStatus[i] = false;
+		}
+
+		_playerBase = GameObject.FindWithTag(Tags.PLAYER).GetComponent<PlayerBase>();
+		_playerBase.PlayerInventory.OnInventoryAdded += OnInventoryAdded;
+		_playerBase.PlayerInventory.OnInventoryRemoved += OnInventoryRemoved;
+
+		gameUI = GameObject.FindWithTag(Tags.GAMEUI);
 	}
 	
 	void Update()
@@ -40,6 +63,29 @@ public class UIController : MonoBehaviour
 		{
 			if( state == States.Pause ) UnpauseGame();
 			else PauseGame();
+		}
+	}
+
+	void OnInventoryAdded(ItemBase itemBase)
+	{
+		syncInventory();
+	}
+
+	void OnInventoryRemoved(ItemBase itemBase)
+	{
+		syncInventory();
+	}
+
+	void syncInventory()
+	{
+		List<ItemBase> itemBaseList = _playerBase.PlayerInventory.ItemBaseList();
+
+		for (int i = 0; i < _playerBase.PlayerInventory.MaximumNumberOfItems() ; i++) {
+			if(itemBaseList.Count> i){
+				gameUI.transform.Find("Canvas/ItemSlot" + i).GetComponent<RawImage>().texture = itemBaseList[i].ItemProperty.SlotImage();
+			}else{
+				gameUI.transform.Find("Canvas/ItemSlot" + i).GetComponent<RawImage>().texture = emptySlot;
+			}
 		}
 	}
 	

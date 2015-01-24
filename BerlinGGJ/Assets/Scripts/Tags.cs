@@ -6,4 +6,5 @@ public class Tags : MonoBehaviour {
 	public const string CREEP = "Creep";
 	public const string ITEM = "Item";
 	public const string PLAYER = "Player";
+	public const string GAMEUI = "GameUI";
 }
