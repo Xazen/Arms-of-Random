@@ -14,7 +14,6 @@ public class PlayerVisual : ActorVisual {
 	
 	public void OnHealthChanged(float oldValue, float newValue)
 	{
-		Debug.Log("health ...");
 		if (newValue <= 0) 
 		{
 			_animator.Play("death");
