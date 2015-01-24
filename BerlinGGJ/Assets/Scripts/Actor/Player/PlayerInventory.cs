@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class PlayerInventory : MonoBehaviour {
 
+	[SerializeField] private int _maxNumberOfItems = 3;
 	private PlayerBase _playerBase;
 	private List<ItemBase> _itemList = new List<ItemBase>();
 
@@ -16,12 +17,24 @@ public class PlayerInventory : MonoBehaviour {
 
 	public void OnItemCollision(ItemBase itemBase)
 	{
-		itemBase.ItemProperty.WeaponType = WeaponController.RandomWeaponType ();
-		
+		if (!IsFull) 
+		{
+			itemBase.ItemProperty.WeaponType = WeaponController.RandomWeaponType ();
+			_itemList.Add (itemBase);
+		}
 	}
 
 	public void ItemSelectedWithIndex(int index)
 	{
-		Debug.Log ("Item selected: " + index);
+		if (_itemList.Count >= index) 
+		{
+			ItemBase itemBase = _itemList[index];
+			_itemList.RemoveAt(index);
+		}
+	}
+
+	public bool IsFull()
+	{
+		return (_itemList.Count < _maxNumberOfItems);
 	}
 }
