@@ -23,22 +23,34 @@ public class PlayerInput : MonoBehaviour {
 	void Update () {
 		if (Input.GetButtonDown ("Jump")) 
 		{
-			jump();
+			if (jump != null) 
+			{
+				jump();
+			}
 		}
 
 		if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.0f) 
 		{
-			moveHorizontal(Input.GetAxis("Horizontal"));
+			if (moveHorizontal != null)
+			{
+				moveHorizontal(Input.GetAxis("Horizontal"));
+			}
 		}
 
-		if (Mathf.Abs(Input.GetAxis("Vertical")) > 0.0f) 
+		if (Mathf.Abs (Input.GetAxis ("Vertical")) > 0.0f) 
 		{
-			moveVertical(Input.GetAxis("Vertical"));
+			if (moveVertical != null) 
+			{
+				moveVertical (Input.GetAxis ("Vertical"));
+			}
 		}
 
 		if (Input.GetButtonDown ("Fire1")) 
 		{
-			attack();
+			if (attack != null) 
+			{
+				attack();
+			}
 		}
 	}
 }

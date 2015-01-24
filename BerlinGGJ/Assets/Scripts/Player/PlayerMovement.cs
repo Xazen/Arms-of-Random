@@ -3,8 +3,11 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
 
-	[SerializeField] private float _speed;
+	[SerializeField] private float _speed = 5.0f;
 	private PlayerBase _playerBase;
+
+	public delegate void PositionChanged(Vector3 position);
+	public event PositionChanged OnPositionChanged;
 
 	// Use this for initialization
 	void Start () 
@@ -12,27 +15,22 @@ public class PlayerMovement : MonoBehaviour {
 		_playerBase = GetComponent<PlayerBase> ();
 		_playerBase.PlayerInput.jump += OnJump;
 		_playerBase.PlayerInput.moveHorizontal += OnMove;
-		_playerBase.PlayerInput.moveVertical += OnVMove;
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-	
 	}
 
 	void OnJump ()
 	{
-		_playerBase.ActorHealth.decreaseHP (1.0f);
+		
 	}
 
 	void OnMove(float value)
 	{
-		_playerBase.ActorHealth.resetHP();
-	}
+		Vector3 newPosition = transform.position;
+		newPosition.x += _speed * Time.deltaTime * value;
+		transform.position = newPosition;
 
-	void OnVMove(float value)
-	{
-
+		if (OnPositionChanged != null)
+		{
+			OnPositionChanged(newPosition);
+		}
 	}
 }
