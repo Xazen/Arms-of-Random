@@ -7,9 +7,11 @@ public class CreepMovement : MonoBehaviour {
 
 	void Start() {
 		_creepBase = GetComponent<CreepBase>();
+		_creepBase.CreepController.moveHorizontal += OnMove;
 	}
 
-	void Update () {
-		transform.Translate( Vector3.forward * 0.1f);
+	void OnMove(float value)
+	{
+		transform.Translate( Vector3.forward);
 	}
 }

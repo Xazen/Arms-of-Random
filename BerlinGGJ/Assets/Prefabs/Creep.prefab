@@ -74,7 +74,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 47f31ab49e5bf4a3da40bd096507c607, type: 2}
+  - {fileID: 2100000, guid: 7f04cb09bffb348d3a65b6e52e458a16, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -114,8 +114,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.58946109, y: 3.4232235, z: 1.88051128}
-  m_Center: {x: 0, y: 1.79999995, z: -.166327596}
+  m_Size: {x: 2.58946109, y: 3.4232235, z: 2.1542902}
+  m_Center: {x: -1.42108547e-14, y: 1.79999995, z: .307453603}
 --- !u!95 &9545288
 Animator:
   serializedVersion: 3

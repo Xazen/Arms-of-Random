@@ -18,6 +18,21 @@ public class CreepBase : ActorBase {
 		}
 	}
 
+	private CreepController _creepController;
+	
+	public CreepController CreepController
+	{
+		get
+		{
+			if (_creepController == null)
+			{
+				_creepController = GetComponent<CreepController>();
+			}
+			
+			return _creepController;
+		}
+	}
+
 	private CreepCollision _creepCollision;
 
 	public CreepCollision CreepCollision
@@ -33,18 +48,4 @@ public class CreepBase : ActorBase {
 		}
 	}
 
-	private ActorHealth _actorHealth;
-
-	public ActorHealth ActorHealth
-	{
-		get
-		{
-			if (_actorHealth == null)
-			{
-				_actorHealth = GetComponent<ActorHealth>();
-			}
-			
-			return _actorHealth;
-		}
-	}
 }

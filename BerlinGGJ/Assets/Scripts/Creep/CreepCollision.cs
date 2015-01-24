@@ -14,7 +14,7 @@ public class CreepCollision : MonoBehaviour {
 	{
 		if(Tags.PROJECTILE == collision.gameObject.tag){
 			// TODO wait for dennis changes
-//			_creepBase.ActorHealth.
+//			_creepBase.ActorHealth
 		}
 	}
 }
