@@ -688,6 +688,9 @@ GameObject:
   - 33: {fileID: 2033869297}
   - 65: {fileID: 2033869296}
   - 23: {fileID: 2033869295}
+  - 114: {fileID: 2033869301}
+  - 114: {fileID: 2033869300}
+  - 114: {fileID: 2033869299}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -747,3 +750,36 @@ Transform:
   - {fileID: 1070396035}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &2033869299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2033869294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02abdd0d0736469f8f66e5f3e4cea20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2033869300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2033869294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe0c333faa01304daed7b23857a3a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2033869301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2033869294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87300adc18b2447fb88f43fabd6bb22e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
