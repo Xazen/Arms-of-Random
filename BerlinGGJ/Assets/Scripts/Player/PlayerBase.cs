@@ -29,4 +29,30 @@ public class PlayerBase : ActorBase
 			return _playerMovement;
 		}
 	}
+
+	private PlayerCollision _playerCollision;
+	public PlayerCollision PlayerCollision
+	{
+		get
+		{
+			if (_playerCollision == null)
+			{
+				_playerCollision = GetComponent<PlayerCollision>();
+			}
+			return _playerCollision;
+		}
+	}
+		
+	private PlayerInventory _playerInventory;
+	public PlayerInventory PlayerInventory
+	{
+		get
+		{
+			if (_playerInventory == null)
+			{
+				_playerInventory = GetComponent<PlayerInventory>();
+			}
+			return _playerInventory;
+		}
+	}
 }

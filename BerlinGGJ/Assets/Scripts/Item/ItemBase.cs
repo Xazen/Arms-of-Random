@@ -28,4 +28,30 @@ public class ItemBase : MonoBehaviour {
 			return _itemProperties;
 		}
 	}
+		
+	private ItemVisual _itemVisual;
+	public ItemVisual ItemVisual
+	{
+		get 
+		{
+			if (_itemVisual == null)
+			{
+				_itemVisual = GetComponent<ItemVisual>();
+			}
+			return _itemVisual;
+		}
+	}
+
+	private ItemCollision _itemCollision;
+	public ItemCollision ItemCollision
+	{
+		get 
+		{
+			if (_itemCollision == null)
+			{
+				_itemCollision = GetComponent<ItemCollision>();
+			}
+			return _itemCollision;
+		}
+	}
 }
