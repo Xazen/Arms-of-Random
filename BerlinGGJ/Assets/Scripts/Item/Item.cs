@@ -26,8 +26,11 @@ public class Item : MonoBehaviour {
 	public void OnPlayerCollision(ItemBase itemBase)
 	{
 		Debug.Log ("Delete item");
-		itemBase.ItemVisual.Remove ();
-		itemBase.gameObject.renderer.enabled = false;
-		itemBase.gameObject.collider.enabled = false;
+		if (!_playerBase.PlayerInventory.IsFull ()) 
+		{
+			itemBase.ItemVisual.Remove ();
+			itemBase.gameObject.renderer.enabled = false;
+			itemBase.gameObject.collider.enabled = false;
+		}
 	}
 }
