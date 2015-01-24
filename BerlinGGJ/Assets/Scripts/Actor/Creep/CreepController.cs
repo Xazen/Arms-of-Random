@@ -16,7 +16,9 @@ public class CreepController : ActorController {
 	}
 
 	void Update() {
-		moveHorizontal(horizontalMovement);
+		if (moveHorizontal != null) {
+			moveHorizontal (horizontalMovement);
+		}
 	}
 
 	void Die()
