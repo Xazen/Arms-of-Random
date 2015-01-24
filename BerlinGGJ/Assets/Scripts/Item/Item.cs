@@ -19,15 +19,15 @@ public class Item : MonoBehaviour {
 		if (_itemBase.ItemProperty.CanUseItem ()) 
 		{
 			_itemBase.ItemProperty.DecreasePosessionCount();
+			_playerBase.WeaponController.OnAttack(_itemBase);
+	
 		}
 	}
 
 	public void OnPlayerCollision(ItemBase itemBase)
 	{
-		if (!_playerBase.PlayerInventory.IsFull()) 
-		{
-			_itemBase.ItemVisual.Remove ();
-			Destroy (this.gameObject);
-		}
+		Debug.Log ("Delete item");
+		_itemBase.ItemVisual.Remove ();
+		Destroy (this.gameObject);
 	}
 }
