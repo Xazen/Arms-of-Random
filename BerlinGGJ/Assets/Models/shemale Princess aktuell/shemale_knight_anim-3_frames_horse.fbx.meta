@@ -1,0 +1,523 @@
+fileFormatVersion: 2
+guid: 382230b277d9247c891712dbbc0ad006
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: chest
+    100002: Hand.L
+    100004: Hand.L_end
+    100006: hand.R
+    100008: hand.R_end
+    100010: herobones
+    100012: hips
+    100014: horse_head
+    100016: horse_head_end
+    100018: horse_neck
+    100020: horsebones
+    100022: mantel.000
+    100024: mantel.001
+    100026: neck
+    100028: neck_end
+    100030: root_horse
+    100032: //RootNode
+    100034: shin.L
+    100036: shin.L_end
+    100038: shin.R
+    100040: shin.R_end
+    100042: shoulder.L
+    100044: shoulder.R
+    100046: thigh.L
+    100048: thigh.R
+    100050: upper_arm.L
+    100052: upper_arm.R
+    400000: chest
+    400002: Hand.L
+    400004: Hand.L_end
+    400006: hand.R
+    400008: hand.R_end
+    400010: herobones
+    400012: hips
+    400014: horse_head
+    400016: horse_head_end
+    400018: horse_neck
+    400020: horsebones
+    400022: mantel.000
+    400024: mantel.001
+    400026: neck
+    400028: neck_end
+    400030: root_horse
+    400032: //RootNode
+    400034: shin.L
+    400036: shin.L_end
+    400038: shin.R
+    400040: shin.R_end
+    400042: shoulder.L
+    400044: shoulder.R
+    400046: thigh.L
+    400048: thigh.R
+    400050: upper_arm.L
+    400052: upper_arm.R
+    4300000: mantel.000
+    4300002: mantel.001
+    7400000: herobones|basic attack
+    7400002: herobones|diebiatch
+    7400004: herobones|walk
+    7400006: horsebones|basic_attack_horse
+    7400008: horsebones|walk_horse
+    9500000: //RootNode
+    13700000: mantel.000
+    13700002: mantel.001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: herobones|basic attack
+      takeName: herobones|basic attack
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: herobones
+        weight: 1
+      - path: herobones/hips
+        weight: 1
+      - path: herobones/hips/chest
+        weight: 1
+      - path: herobones/hips/chest/neck
+        weight: 1
+      - path: herobones/hips/chest/neck/neck_end
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L/upper_arm.L/Hand.L
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L/upper_arm.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R/upper_arm.R/hand.R
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R/upper_arm.R/hand.R/hand.R_end
+        weight: 1
+      - path: herobones/hips/thigh.L
+        weight: 1
+      - path: herobones/hips/thigh.L/shin.L
+        weight: 1
+      - path: herobones/hips/thigh.L/shin.L/shin.L_end
+        weight: 1
+      - path: herobones/hips/thigh.R
+        weight: 1
+      - path: herobones/hips/thigh.R/shin.R
+        weight: 1
+      - path: herobones/hips/thigh.R/shin.R/shin.R_end
+        weight: 1
+      - path: horsebones
+        weight: 1
+      - path: horsebones/root_horse
+        weight: 1
+      - path: horsebones/root_horse/horse_neck
+        weight: 1
+      - path: horsebones/root_horse/horse_neck/horse_head
+        weight: 1
+      - path: horsebones/root_horse/horse_neck/horse_head/horse_head_end
+        weight: 1
+      - path: mantel.000
+        weight: 1
+      - path: mantel.001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: herobones|diebiatch
+      takeName: herobones|diebiatch
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: herobones
+        weight: 1
+      - path: herobones/hips
+        weight: 1
+      - path: herobones/hips/chest
+        weight: 1
+      - path: herobones/hips/chest/neck
+        weight: 1
+      - path: herobones/hips/chest/neck/neck_end
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L/upper_arm.L/Hand.L
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L/upper_arm.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R/upper_arm.R/hand.R
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R/upper_arm.R/hand.R/hand.R_end
+        weight: 1
+      - path: herobones/hips/thigh.L
+        weight: 1
+      - path: herobones/hips/thigh.L/shin.L
+        weight: 1
+      - path: herobones/hips/thigh.L/shin.L/shin.L_end
+        weight: 1
+      - path: herobones/hips/thigh.R
+        weight: 1
+      - path: herobones/hips/thigh.R/shin.R
+        weight: 1
+      - path: herobones/hips/thigh.R/shin.R/shin.R_end
+        weight: 1
+      - path: horsebones
+        weight: 1
+      - path: horsebones/root_horse
+        weight: 1
+      - path: horsebones/root_horse/horse_neck
+        weight: 1
+      - path: horsebones/root_horse/horse_neck/horse_head
+        weight: 1
+      - path: horsebones/root_horse/horse_neck/horse_head/horse_head_end
+        weight: 1
+      - path: mantel.000
+        weight: 1
+      - path: mantel.001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: herobones|walk
+      takeName: herobones|walk
+      firstFrame: 0
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: herobones
+        weight: 1
+      - path: herobones/hips
+        weight: 1
+      - path: herobones/hips/chest
+        weight: 1
+      - path: herobones/hips/chest/neck
+        weight: 1
+      - path: herobones/hips/chest/neck/neck_end
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L/upper_arm.L/Hand.L
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L/upper_arm.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R/upper_arm.R/hand.R
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R/upper_arm.R/hand.R/hand.R_end
+        weight: 1
+      - path: herobones/hips/thigh.L
+        weight: 1
+      - path: herobones/hips/thigh.L/shin.L
+        weight: 1
+      - path: herobones/hips/thigh.L/shin.L/shin.L_end
+        weight: 1
+      - path: herobones/hips/thigh.R
+        weight: 1
+      - path: herobones/hips/thigh.R/shin.R
+        weight: 1
+      - path: herobones/hips/thigh.R/shin.R/shin.R_end
+        weight: 1
+      - path: horsebones
+        weight: 1
+      - path: horsebones/root_horse
+        weight: 1
+      - path: horsebones/root_horse/horse_neck
+        weight: 1
+      - path: horsebones/root_horse/horse_neck/horse_head
+        weight: 1
+      - path: horsebones/root_horse/horse_neck/horse_head/horse_head_end
+        weight: 1
+      - path: mantel.000
+        weight: 1
+      - path: mantel.001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: horsebones|basic_attack_horse
+      takeName: horsebones|basic_attack_horse
+      firstFrame: 0
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: herobones
+        weight: 1
+      - path: herobones/hips
+        weight: 1
+      - path: herobones/hips/chest
+        weight: 1
+      - path: herobones/hips/chest/neck
+        weight: 1
+      - path: herobones/hips/chest/neck/neck_end
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L/upper_arm.L/Hand.L
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L/upper_arm.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R/upper_arm.R/hand.R
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R/upper_arm.R/hand.R/hand.R_end
+        weight: 1
+      - path: herobones/hips/thigh.L
+        weight: 1
+      - path: herobones/hips/thigh.L/shin.L
+        weight: 1
+      - path: herobones/hips/thigh.L/shin.L/shin.L_end
+        weight: 1
+      - path: herobones/hips/thigh.R
+        weight: 1
+      - path: herobones/hips/thigh.R/shin.R
+        weight: 1
+      - path: herobones/hips/thigh.R/shin.R/shin.R_end
+        weight: 1
+      - path: horsebones
+        weight: 1
+      - path: horsebones/root_horse
+        weight: 1
+      - path: horsebones/root_horse/horse_neck
+        weight: 1
+      - path: horsebones/root_horse/horse_neck/horse_head
+        weight: 1
+      - path: horsebones/root_horse/horse_neck/horse_head/horse_head_end
+        weight: 1
+      - path: mantel.000
+        weight: 1
+      - path: mantel.001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: horsebones|walk_horse
+      takeName: horsebones|walk_horse
+      firstFrame: 0
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: herobones
+        weight: 1
+      - path: herobones/hips
+        weight: 1
+      - path: herobones/hips/chest
+        weight: 1
+      - path: herobones/hips/chest/neck
+        weight: 1
+      - path: herobones/hips/chest/neck/neck_end
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L/upper_arm.L
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L/upper_arm.L/Hand.L
+        weight: 1
+      - path: herobones/hips/chest/shoulder.L/upper_arm.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R/upper_arm.R
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R/upper_arm.R/hand.R
+        weight: 1
+      - path: herobones/hips/chest/shoulder.R/upper_arm.R/hand.R/hand.R_end
+        weight: 1
+      - path: herobones/hips/thigh.L
+        weight: 1
+      - path: herobones/hips/thigh.L/shin.L
+        weight: 1
+      - path: herobones/hips/thigh.L/shin.L/shin.L_end
+        weight: 1
+      - path: herobones/hips/thigh.R
+        weight: 1
+      - path: herobones/hips/thigh.R/shin.R
+        weight: 1
+      - path: herobones/hips/thigh.R/shin.R/shin.R_end
+        weight: 1
+      - path: horsebones
+        weight: 1
+      - path: horsebones/root_horse
+        weight: 1
+      - path: horsebones/root_horse/horse_neck
+        weight: 1
+      - path: horsebones/root_horse/horse_neck/horse_head
+        weight: 1
+      - path: horsebones/root_horse/horse_neck/horse_head/horse_head_end
+        weight: 1
+      - path: mantel.000
+        weight: 1
+      - path: mantel.001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
