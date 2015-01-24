@@ -63,6 +63,6 @@ public class ActorHealth : MonoBehaviour {
 	}
 
 	void OnParticleCollision (GameObject gameObject ){
-		decreaseHP (1);
+		decreaseHP (2);
 	}
 }

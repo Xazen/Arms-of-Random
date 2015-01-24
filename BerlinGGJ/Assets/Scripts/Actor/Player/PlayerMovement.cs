@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour {
 	void OnJumpUp()
 	{
 
-		Debug.Log ("JumpUp!!");
+		// TODO necessary
 	}
 
 	void jump ()

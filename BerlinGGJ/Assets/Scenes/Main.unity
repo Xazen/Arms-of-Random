@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
+  _jumpHeight: 500
 --- !u!114 &114098338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,6 +610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotImage: {fileID: 0}
   posessionCount: 0
+  initialUses: 2
 --- !u!114 &639834222
 MonoBehaviour:
   m_ObjectHideFlags: 0
