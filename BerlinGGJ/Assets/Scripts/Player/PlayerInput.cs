@@ -11,7 +11,7 @@ public class PlayerInput : MonoBehaviour {
 	private PlayerBase _playerBase;
 
 	public InputDelegate jump;
-	public InputDelegate attack;
+	public InputDelegateWithInteger attack;
 	public InputDelegateWithValue moveHorizontal;
 	public InputDelegateWithValue moveVertical;
 	public InputDelegateWithInteger number;
@@ -67,7 +67,7 @@ public class PlayerInput : MonoBehaviour {
 		{
 			if (attack != null) 
 			{
-				attack();
+				attack(101);
 			}
 		}
 	}

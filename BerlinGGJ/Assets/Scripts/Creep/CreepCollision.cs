@@ -10,15 +10,7 @@ public class CreepCollision : MonoBehaviour {
 		_creepBase = GetComponent<CreepBase>();
 	}
 
-	void OnCollisionEnter(Collision collision)
-	{
-		if(Tags.PROJECTILE == collision.gameObject.tag){
-			// TODO wait for dennis changes
-//			_creepBase.ActorHealth
-		}
-	}
-
-	void OnParticleCollision (Collision collision ){
-		Debug.Log("yay");
+	void OnParticleCollision (GameObject gameObject ){
+		//TODO implement
 	}
 }
