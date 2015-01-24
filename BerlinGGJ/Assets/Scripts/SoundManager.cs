@@ -68,6 +68,6 @@ public class SoundManager : MonoBehaviour
 		_audioSource.loop = loop;
 
 		_audioSource.clip = audioClip;
-		_audioSource.Play (audioClip);
+		_audioSource.Play();
 	}
 }
