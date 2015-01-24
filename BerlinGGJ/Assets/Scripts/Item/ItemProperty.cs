@@ -22,6 +22,11 @@ public class ItemProperty : MonoBehaviour {
 		}
 	}
 
+	public void ResetPosessionCount()
+	{
+		posessionCount = initialUses;
+	}
+
 	public bool CanUseItem()
 	{
 		return (posessionCount > 0);

@@ -3,29 +3,29 @@ using System.Collections;
 
 public class ItemBase : MonoBehaviour {
 
-	private Item _item;
-	public Item Item
+	private ItemController _itemController;
+	public ItemController ItemController
 	{
 		get
 		{
-			if(_item == null)
+			if(_itemController == null)
 			{
-				_item = GetComponent<Item>();
+				_itemController = GetComponent<ItemController>();
 			}
-			return _item;
+			return _itemController;
 		}
 	}
 
-	private ItemProperty _itemProperties;
+	private ItemProperty _itemProperty;
 	public ItemProperty ItemProperty
 	{
 		get 
 		{
-			if (_itemProperties == null)
+			if (_itemProperty == null)
 			{
-				_itemProperties = GetComponent<ItemProperty>();
+				_itemProperty = GetComponent<ItemProperty>();
 			}
-			return _itemProperties;
+			return _itemProperty;
 		}
 	}
 		
@@ -39,6 +39,19 @@ public class ItemBase : MonoBehaviour {
 				_itemVisual = GetComponent<ItemVisual>();
 			}
 			return _itemVisual;
+		}
+	}
+
+	private ItemCollision _itemCollision;
+	public ItemCollision ItemCollision
+	{
+		get
+		{
+			if (_itemCollision == null)
+			{
+				_itemCollision = GetComponent<ItemCollision>();
+			}
+			return _itemCollision;
 		}
 	}
 }
