@@ -8,6 +8,11 @@ public class PlayerInventory : MonoBehaviour {
 	private PlayerBase _playerBase;
 	private List<ItemBase> _itemList = new List<ItemBase>();
 
+	public delegate void InventoryChanged(ItemBase itemBase);
+	public event InventoryChanged OnInventoryAdded;
+	public event InventoryChanged OnInventoryRemoved;
+	public event InventoryChanged OnInventoryUsed;
+
 	// Use this for initialization
 	void Start () {
 		_playerBase = GetComponent<PlayerBase> ();
@@ -21,6 +26,10 @@ public class PlayerInventory : MonoBehaviour {
 		{
 			itemBase.ItemProperty.WeaponType = WeaponController.RandomWeaponType ();
 			_itemList.Add (itemBase);
+			if (OnInventoryAdded != null)
+			{
+				OnInventoryAdded(itemBase);
+			}
 			Debug.Log("Item collected: " + _itemList);
 			Debug.Log("item list count: " + _itemList.Count);
 		}
@@ -35,9 +44,20 @@ public class PlayerInventory : MonoBehaviour {
 			ItemBase itemBase = _itemList[index-1];
 			itemBase.Item.Use();
 			itemBase.ItemProperty.DecreasePosessionCount();
+
+			if (OnInventoryUsed != null)
+			{
+				OnInventoryUsed(itemBase);
+			}
+
 			if (!itemBase.ItemProperty.CanUseItem())
 			{
 				_itemList.RemoveAt(index-1);
+				if (OnInventoryRemoved != null)
+				{
+					OnInventoryRemoved(itemBase);
+				}
+				Destroy(itemBase.gameObject);
 				Debug.Log("Item removed");
 			}
 			Debug.Log("Item used: " + _itemList);
