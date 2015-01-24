@@ -10,7 +10,8 @@ public class CreepCollision : MonoBehaviour {
 		_creepBase = GetComponent<CreepBase>();
 	}
 
-	void OnParticleCollision (GameObject gameObject ){
+	void OnParticleCollision (GameObject gameObject )
+	{
 		//TODO implement
 	}
 }

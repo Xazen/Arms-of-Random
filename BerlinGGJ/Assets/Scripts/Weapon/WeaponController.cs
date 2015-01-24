@@ -18,7 +18,7 @@ public class WeaponController : MonoBehaviour {
 			cube.AddComponent<Rigidbody>();
 			cube.transform.position = transform.position;
 			cube.AddComponent<ConstantForce>();
-			cube.transform.constantForce.force = Vector3.left * 100;
+			cube.transform.constantForce.force = Vector3.right * 100;
 			cube.transform.Translate( Vector3.forward );
 		}
 	}
