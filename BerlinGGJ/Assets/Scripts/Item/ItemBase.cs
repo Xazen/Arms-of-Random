@@ -3,13 +3,17 @@ using System.Collections;
 
 public class ItemBase : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	private ItemProperty _itemProperties;
+
+	public ItemProperty ItemProperty
+	{
+		get 
+		{
+			if (_itemProperties == null)
+			{
+				_itemProperties = GetComponent<ItemProperty>();
+			}
+			return _itemProperties;
+		}
 	}
 }
