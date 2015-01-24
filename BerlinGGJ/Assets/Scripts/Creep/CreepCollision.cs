@@ -18,7 +18,7 @@ public class CreepCollision : MonoBehaviour {
 		}
 	}
 
-	void OnParticleCollision (Collision collision ){
+	void OnParticleCollision (GameObject gameObject ){
 		Debug.Log("yay");
 	}
 }
