@@ -5,7 +5,17 @@ public class ItemProperty : MonoBehaviour {
 
 	[SerializeField] private SpriteRenderer slotImage;
 	[SerializeField] private int posessionCount = 0;
-	[SerializeField] bool selected = false;
 
-	public void decreasePosessionCount(){}
+	public void decreasePosessionCount()
+	{
+		if (posessionCount > 0) 
+		{
+			posessionCount--;
+		}
+	}
+
+	public bool canUseItem()
+	{
+		return (posessionCount > 0);
+	}
 }

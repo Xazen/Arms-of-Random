@@ -3,8 +3,20 @@ using System.Collections;
 
 public class ItemBase : MonoBehaviour {
 
-	private ItemProperty _itemProperties;
+	private Item _item;
+	public Item Item
+	{
+		get
+		{
+			if(_item == null)
+			{
+				_item = GetComponent<Item>();
+			}
+			return _item;
+		}
+	}
 
+	private ItemProperty _itemProperties;
 	public ItemProperty ItemProperty
 	{
 		get 
