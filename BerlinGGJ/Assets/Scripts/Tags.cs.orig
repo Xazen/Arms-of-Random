@@ -8,6 +8,9 @@ public class Tags : MonoBehaviour {
 	public const string PLAYER = "Player";
 	public const string GAMEUI = "GameUI";
 	public const string CAMERAHOLDER = "CameraHolder";
-	public const string GAMECONTROLLER = "GameController";
+<<<<<<< HEAD
 	public const string FLOOR = "Floor";
+=======
+	public const string GAMECONTROLLER = "GameController";
+>>>>>>> 38372225c33f46411ec3c64bc47a080ae70f3520
 }
