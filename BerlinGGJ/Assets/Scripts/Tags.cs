@@ -3,4 +3,6 @@ using System.Collections;
 
 public class Tags : MonoBehaviour {
 	public const string PROJECTILE = "Projectile";
+	public const string ITEM = "Item";
+	public const string PLAYER = "Player";
 }
