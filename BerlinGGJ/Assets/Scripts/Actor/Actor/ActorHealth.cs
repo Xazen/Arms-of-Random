@@ -57,11 +57,6 @@ public class ActorHealth : MonoBehaviour {
 
 	}
 
-	void OnCollision(Collider collider)
-	{
-		Debug.Log("tyaasdasd");
-	}
-
 	public void OnProjectileCollision(ProjectileBase projectileBase)
 	{
 		decreaseHP (projectileBase.ProjectileProperties.damage);

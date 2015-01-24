@@ -96,7 +96,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 423314}
-  - 95: {fileID: 9523366}
   m_Layer: 0
   m_Name: shemale_knight_anim-3_frames_horse
   m_TagString: Untagged
@@ -516,7 +515,7 @@ GameObject:
   - 114: {fileID: 11440908}
   - 82: {fileID: 8298426}
   - 95: {fileID: 9586656}
-  - 114: {fileID: 11486658}
+  - 114: {fileID: 11446530}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -749,9 +748,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123314}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.97674561, y: -.372093886, z: 0}
-  m_LocalScale: {x: .58768785, y: .117537551, z: .581395268}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 133.917313, y: 26.7834721, z: 132.483475}
   m_Children:
   - {fileID: 423316}
   - {fileID: 423318}
@@ -1101,7 +1100,7 @@ Transform:
   m_GameObject: {fileID: 128758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12, y: 3.20000005, z: 0}
-  m_LocalScale: {x: 1.72000003, y: 8.60000134, z: 1.72000027}
+  m_LocalScale: {x: 3.06779075, y: 15.3389473, z: 3.06778955}
   m_Children:
   - {fileID: 423314}
   - {fileID: 410286}
@@ -1412,21 +1411,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!95 &9523366
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 123314}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 382230b277d9247c891712dbbc0ad006, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9586656
 Animator:
   serializedVersion: 3
@@ -1435,7 +1419,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128758}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: e5adb632268d4401d8bbd44a136e2ad8, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 382230b277d9247c891712dbbc0ad006, type: 3}
   m_Controller: {fileID: 9100000, guid: 8aefaff3b186d4aebb176366c36357ab, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
@@ -1525,6 +1509,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectile: {fileID: 122226, guid: 59140a36f8ee1894aa39859e6dfaa09d, type: 2}
+--- !u!114 &11446530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4f676346fb848a49ea29538d400872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11453908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1534,17 +1529,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 988b1ecc3eeb8054b87dcb3333034249, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11486658
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 128758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8941d0c693e3b451299bead931851db7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!137 &13723364
@@ -1559,7 +1543,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: d3ad547184243442386c97787e18afd6, type: 2}
+  - {fileID: 2100000, guid: 01f28d39016b148db98abe7f1427f390, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1603,7 +1587,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 6fa61ca587b48483e91449a4da90843d, type: 2}
+  - {fileID: 2100000, guid: 6408dec9686624bfd8dea526f97d1909, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
