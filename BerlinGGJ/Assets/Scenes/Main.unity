@@ -645,6 +645,7 @@ GameObject:
   - 114: {fileID: 245533671}
   - 114: {fileID: 245533670}
   - 114: {fileID: 245533669}
+  - 95: {fileID: 245533677}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -664,6 +665,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4203c32a08e305d49b789db29be11784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spinningSpeed: 10
+  respawnTime: 10
 --- !u!114 &245533670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,7 +703,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 245533668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812eee7081b9c614b98a47915d0f9a39, type: 3}
+  m_Script: {fileID: 11500000, guid: d1a0cae36e1f1594bb348a3cb1a39390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!23 &245533673
@@ -758,6 +761,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!95 &245533677
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9531202, guid: 7a87775512b25b24d960c64dfe515a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 413908977}
+  m_GameObject: {fileID: 245533668}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4177f9118cd7824f99f77fcaff2cb1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &266629815
 GameObject:
   m_ObjectHideFlags: 0
@@ -6412,6 +6431,7 @@ GameObject:
   - 114: {fileID: 1055236906}
   - 114: {fileID: 1055236905}
   - 114: {fileID: 1055236904}
+  - 95: {fileID: 1055236912}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -6431,6 +6451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4203c32a08e305d49b789db29be11784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spinningSpeed: 10
+  respawnTime: 10
 --- !u!114 &1055236905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6467,7 +6489,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1055236903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812eee7081b9c614b98a47915d0f9a39, type: 3}
+  m_Script: {fileID: 11500000, guid: d1a0cae36e1f1594bb348a3cb1a39390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!23 &1055236908
@@ -6525,6 +6547,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+--- !u!95 &1055236912
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9531202, guid: 7a87775512b25b24d960c64dfe515a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 594737789}
+  m_GameObject: {fileID: 1055236903}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4177f9118cd7824f99f77fcaff2cb1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1057133515
 GameObject:
   m_ObjectHideFlags: 0
@@ -8691,6 +8729,7 @@ GameObject:
   - 114: {fileID: 1109394465}
   - 114: {fileID: 1109394464}
   - 114: {fileID: 1109394463}
+  - 95: {fileID: 1109394471}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -8710,6 +8749,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4203c32a08e305d49b789db29be11784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spinningSpeed: 10
+  respawnTime: 10
 --- !u!114 &1109394464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8746,7 +8787,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1109394462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812eee7081b9c614b98a47915d0f9a39, type: 3}
+  m_Script: {fileID: 11500000, guid: d1a0cae36e1f1594bb348a3cb1a39390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!23 &1109394467
@@ -8804,6 +8845,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!95 &1109394471
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9531202, guid: 7a87775512b25b24d960c64dfe515a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1261691204}
+  m_GameObject: {fileID: 1109394462}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4177f9118cd7824f99f77fcaff2cb1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1119953921
 GameObject:
   m_ObjectHideFlags: 0
@@ -11200,6 +11257,7 @@ GameObject:
   - 114: {fileID: 1233014644}
   - 114: {fileID: 1233014643}
   - 114: {fileID: 1233014642}
+  - 95: {fileID: 1233014650}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -11219,6 +11277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4203c32a08e305d49b789db29be11784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spinningSpeed: 10
+  respawnTime: 10
 --- !u!114 &1233014643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11255,7 +11315,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1233014641}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812eee7081b9c614b98a47915d0f9a39, type: 3}
+  m_Script: {fileID: 11500000, guid: d1a0cae36e1f1594bb348a3cb1a39390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!23 &1233014646
@@ -11313,6 +11373,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
+--- !u!95 &1233014650
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9531202, guid: 7a87775512b25b24d960c64dfe515a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1847062747}
+  m_GameObject: {fileID: 1233014641}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4177f9118cd7824f99f77fcaff2cb1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1261691204
 Prefab:
   m_ObjectHideFlags: 0
@@ -12830,6 +12906,7 @@ GameObject:
   - 114: {fileID: 1413309912}
   - 114: {fileID: 1413309911}
   - 114: {fileID: 1413309910}
+  - 95: {fileID: 1413309918}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -12849,6 +12926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4203c32a08e305d49b789db29be11784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spinningSpeed: 10
+  respawnTime: 10
 --- !u!114 &1413309911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12885,7 +12964,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1413309909}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812eee7081b9c614b98a47915d0f9a39, type: 3}
+  m_Script: {fileID: 11500000, guid: d1a0cae36e1f1594bb348a3cb1a39390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!23 &1413309914
@@ -12943,6 +13022,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
+--- !u!95 &1413309918
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9531202, guid: 7a87775512b25b24d960c64dfe515a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 176195104}
+  m_GameObject: {fileID: 1413309909}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4177f9118cd7824f99f77fcaff2cb1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1466591517
 GameObject:
   m_ObjectHideFlags: 0
@@ -14230,6 +14325,7 @@ GameObject:
   - 114: {fileID: 1613286082}
   - 114: {fileID: 1613286081}
   - 114: {fileID: 1613286080}
+  - 95: {fileID: 1613286088}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -14249,6 +14345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4203c32a08e305d49b789db29be11784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spinningSpeed: 10
+  respawnTime: 10
 --- !u!114 &1613286081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14285,7 +14383,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1613286079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812eee7081b9c614b98a47915d0f9a39, type: 3}
+  m_Script: {fileID: 11500000, guid: d1a0cae36e1f1594bb348a3cb1a39390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!23 &1613286084
@@ -14343,6 +14441,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
+--- !u!95 &1613286088
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9531202, guid: 7a87775512b25b24d960c64dfe515a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1636435293}
+  m_GameObject: {fileID: 1613286079}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4177f9118cd7824f99f77fcaff2cb1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1636435293
 Prefab:
   m_ObjectHideFlags: 0
@@ -16774,6 +16888,7 @@ GameObject:
   - 114: {fileID: 1831339458}
   - 114: {fileID: 1831339457}
   - 114: {fileID: 1831339456}
+  - 95: {fileID: 1831339464}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -16793,6 +16908,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4203c32a08e305d49b789db29be11784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spinningSpeed: 10
+  respawnTime: 10
 --- !u!114 &1831339457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16829,7 +16946,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1831339455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812eee7081b9c614b98a47915d0f9a39, type: 3}
+  m_Script: {fileID: 11500000, guid: d1a0cae36e1f1594bb348a3cb1a39390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!23 &1831339460
@@ -16887,6 +17004,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+--- !u!95 &1831339464
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9531202, guid: 7a87775512b25b24d960c64dfe515a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1497285439}
+  m_GameObject: {fileID: 1831339455}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4177f9118cd7824f99f77fcaff2cb1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1847062747
 Prefab:
   m_ObjectHideFlags: 0
@@ -16946,6 +17079,7 @@ GameObject:
   - 114: {fileID: 1873087755}
   - 114: {fileID: 1873087754}
   - 114: {fileID: 1873087753}
+  - 95: {fileID: 1873087761}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -16965,6 +17099,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4203c32a08e305d49b789db29be11784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spinningSpeed: 10
+  respawnTime: 10
 --- !u!114 &1873087754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17001,7 +17137,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1873087752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812eee7081b9c614b98a47915d0f9a39, type: 3}
+  m_Script: {fileID: 11500000, guid: d1a0cae36e1f1594bb348a3cb1a39390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!23 &1873087757
@@ -17059,6 +17195,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+--- !u!95 &1873087761
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9531202, guid: 7a87775512b25b24d960c64dfe515a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1594271371}
+  m_GameObject: {fileID: 1873087752}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4177f9118cd7824f99f77fcaff2cb1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1874097770
 GameObject:
   m_ObjectHideFlags: 0
@@ -17321,6 +17473,7 @@ GameObject:
   - 114: {fileID: 1941797310}
   - 114: {fileID: 1941797309}
   - 114: {fileID: 1941797308}
+  - 95: {fileID: 1941797316}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -17340,6 +17493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4203c32a08e305d49b789db29be11784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spinningSpeed: 10
+  respawnTime: 10
 --- !u!114 &1941797309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17376,7 +17531,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1941797307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812eee7081b9c614b98a47915d0f9a39, type: 3}
+  m_Script: {fileID: 11500000, guid: d1a0cae36e1f1594bb348a3cb1a39390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!23 &1941797312
@@ -17434,6 +17589,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
+--- !u!95 &1941797316
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9531202, guid: 7a87775512b25b24d960c64dfe515a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1480937410}
+  m_GameObject: {fileID: 1941797307}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4177f9118cd7824f99f77fcaff2cb1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1946047414
 Prefab:
   m_ObjectHideFlags: 0
@@ -17834,6 +18005,7 @@ GameObject:
   - 114: {fileID: 2109328537}
   - 114: {fileID: 2109328536}
   - 114: {fileID: 2109328535}
+  - 95: {fileID: 2109328534}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -17841,6 +18013,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &2109328534
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9531202, guid: 7a87775512b25b24d960c64dfe515a4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 371113721}
+  m_GameObject: {fileID: 2109328533}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4177f9118cd7824f99f77fcaff2cb1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &2109328535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17853,6 +18041,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4203c32a08e305d49b789db29be11784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spinningSpeed: 10
+  respawnTime: 10
 --- !u!114 &2109328536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17889,7 +18079,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2109328533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812eee7081b9c614b98a47915d0f9a39, type: 3}
+  m_Script: {fileID: 11500000, guid: d1a0cae36e1f1594bb348a3cb1a39390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!23 &2109328539

@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		_playerBase = GetComponent<PlayerBase> ();
 		_playerBase.PlayerInput.jumpDown += OnJumpDown;
-		_playerBase.PlayerInput.jumpUp += OnJumpUp;
+//		_playerBase.PlayerInput.jumpUp += OnJumpUp;
 		_playerBase.PlayerInput.moveHorizontal += OnMove;
 	}
 
