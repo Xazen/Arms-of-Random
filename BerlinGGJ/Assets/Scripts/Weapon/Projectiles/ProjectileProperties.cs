@@ -3,13 +3,9 @@ using System.Collections;
 
 public class ProjectileProperties : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	[SerializeField] private float _damage = 1.0f;
+	public float damage
+	{
+		get{return _damage;}
 	}
 }

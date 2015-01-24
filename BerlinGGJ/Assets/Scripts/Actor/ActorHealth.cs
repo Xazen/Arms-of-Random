@@ -11,8 +11,16 @@ public class ActorHealth : MonoBehaviour {
 
 	bool died = false;
 
+	private ActorBase _actorBase;
+
 	public delegate void HealthChanged(float oldValue, float newValue);
 	public event HealthChanged OnHealthChanged;
+
+	void Start()
+	{
+		_actorBase = GetComponent<ActorBase> ();
+		_actorBase.ActorCollision.projectileCollision += OnProjectileCollision;
+	}
 
 	public void decreaseHP(float amount)
 	{
@@ -49,5 +57,8 @@ public class ActorHealth : MonoBehaviour {
 	
 	}
 
-	
+	public void OnProjectileCollision(ProjectileBase projectileBase)
+	{
+		decreaseHP (projectileBase.ProjectileProperties.damage);
+	}
 }

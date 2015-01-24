@@ -3,13 +3,16 @@ using System.Collections;
 
 public class ProjectileBase : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	private ProjectileProperties _projectileProperties;
+	public ProjectileProperties ProjectileProperties
+	{
+		get 
+		{
+			if (_projectileProperties == null)
+			{
+				_projectileProperties = GetComponent<ProjectileProperties>();
+			}
+			return _projectileProperties;
+		}
 	}
 }

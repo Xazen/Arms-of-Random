@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class CreepCollision : MonoBehaviour {
-
+	
 	CreepBase _creepBase;
 
 	void Awake()
