@@ -12,6 +12,7 @@ public class CreepCollision : ActorCollision {
 
 	void OnParticleCollision (GameObject gameObject )
 	{
+		SoundManager.sharedManager.Play(SoundManager.sharedManager.playerLanding);
 		//TODO implement
 	}
 
