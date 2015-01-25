@@ -8,6 +8,8 @@ public class CreepMovement : MonoBehaviour {
 	[SerializeField] private float movementSpeed = 0.8f;
 	private PlayerBase _playerBase;
 
+	bool goingLeft = true;
+
 	void Start() {
 		_creepBase = GetComponent<CreepBase>();
 		_creepBase.CreepController.moveHorizontal += OnMove;
@@ -29,6 +31,22 @@ public class CreepMovement : MonoBehaviour {
 		Vector3 creepMoveDirection = (_playerBase.transform.position.x <= transform.position.x) ? Vector3.back : Vector3.forward;
 		transform.Translate( creepMoveDirection * value * movementSpeed);
 
+		if(creepMoveDirection == Vector3.forward)
+		{
+			if(goingLeft)
+			{
+				transform.Rotate(0,180,0);
+			}
+			goingLeft = false;
+		}else {
+			
+			if(!goingLeft)
+			{
+				transform.Rotate(0,180,0);
+			}
+			goingLeft = true;
+		}
+
 	}
 
 	public void StopMove()
@@ -41,6 +59,7 @@ public class CreepMovement : MonoBehaviour {
 				SoundManager.sharedManager.Stop (SoundManager.ENEMY);
 			}
 		}
+
 		_creepBase.CreepController.moveHorizontal -= OnMove;
 	}
 }
