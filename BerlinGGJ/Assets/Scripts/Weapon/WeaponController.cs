@@ -6,6 +6,9 @@ public class WeaponController : MonoBehaviour {
 	[SerializeField] private GameObject _projectile;
 	PlayerBase _playerBase;
 
+	ActorBase _actorBase;
+	Animator _animator;
+
 	void Start () {
 		_playerBase = GameObject.FindGameObjectWithTag(Tags.PLAYER).GetComponent<PlayerBase>();
 	}
@@ -36,6 +39,10 @@ public class WeaponController : MonoBehaviour {
 
 	public void OnAttack(int weaponType)
 	{
+		_playerBase.GetComponent<Animator>().Play("attack");
+		_actorBase = GetComponent<ActorBase> ();
+		_animator = _actorBase.GetComponent<Animator>();
+		_animator.Play("attack");
 		attack (weaponType);
 
 	}

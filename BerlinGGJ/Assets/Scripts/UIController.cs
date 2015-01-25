@@ -43,7 +43,7 @@ public class UIController : MonoBehaviour
 	{
 		if( Menu == null ) Menu = GameObject.Find("EscapeMenu");
 		ContinueB = Menu.transform.Find("Canvas/ContinueButton").gameObject;
-		RestartB = Menu.transform.Find("Canvas/RestartButton").gameObject;
+		RestartB = Menu.transform.Find("Canvas/BackToMainMenu").gameObject;
 		Menu.SetActive( false );
 
 		for (int i = 0; i < slotCount; i++) {

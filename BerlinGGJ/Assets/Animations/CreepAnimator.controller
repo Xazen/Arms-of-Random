@@ -70,6 +70,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110245142
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: metarig|walkything
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400006, guid: de823bea044274ec4b34a6f8f9fb6c41, type: 3}
+  m_ParentStateMachine: {fileID: 110783492}
+  m_Position: {x: 407, y: 5, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1107 &110783492
 StateMachine:
   serializedVersion: 2
@@ -81,6 +96,7 @@ StateMachine:
   m_States:
   - {fileID: 110211790}
   - {fileID: 110211792}
+  - {fileID: 110245142}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:

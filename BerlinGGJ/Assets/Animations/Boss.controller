@@ -20,33 +20,18 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &110217378
+--- !u!1102 &110205150
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: metarig|walk_test
+  m_Name: metarig_walkything
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400010, guid: a19e4f736305f42c095c220dd31b295b, type: 3}
+  - {fileID: 7400000, guid: a23f17032ab0049508f93e8312f8a038, type: 2}
   m_ParentStateMachine: {fileID: 110790254}
-  m_Position: {x: -120, y: 96, z: 0}
-  m_IKOnFeet: 0
-  m_Mirror: 0
-  m_Tag: 
---- !u!1102 &110290254
-State:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: hamsterilla_walk_test
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Motions:
-  - {fileID: 7400000, guid: cc7e5116523f341fe90456bd7cc8add6, type: 2}
-  m_ParentStateMachine: {fileID: 110790254}
-  m_Position: {x: 50, y: 50, z: 0}
+  m_Position: {x: 15, y: 105, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -57,10 +42,9 @@ StateMachine:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Base Layer
-  m_DefaultState: {fileID: 110290254}
+  m_DefaultState: {fileID: 110205150}
   m_States:
-  - {fileID: 110290254}
-  - {fileID: 110217378}
+  - {fileID: 110205150}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions: {}
