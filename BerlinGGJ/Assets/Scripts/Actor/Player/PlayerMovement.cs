@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour {
 	bool inAir = false;
 	bool secondJump = true;
 
-	bool goingLeft = true;
+	public bool goingLeft = true;
 
 	// Use this for initialization
 	void Start () 

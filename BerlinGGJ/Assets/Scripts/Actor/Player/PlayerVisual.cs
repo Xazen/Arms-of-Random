@@ -16,6 +16,7 @@ public class PlayerVisual : ActorVisual {
 	{
 		if (newValue <= 0) 
 		{
+			SoundManager.sharedManager.Play(SoundManager.sharedManager.playerDeath);
 			_animator.Play("death");
 			_actorBase.GetComponent<PlayerInput>().enabled = false;
 		}

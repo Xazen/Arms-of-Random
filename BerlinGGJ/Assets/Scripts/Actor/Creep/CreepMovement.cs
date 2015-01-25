@@ -5,10 +5,13 @@ public class CreepMovement : MonoBehaviour {
 
 	CreepBase _creepBase;
 	private bool isMoving = false;
+	[SerializeField] private float movementSpeed = 0.8f;
+	private PlayerBase _playerBase;
 
 	void Start() {
 		_creepBase = GetComponent<CreepBase>();
 		_creepBase.CreepController.moveHorizontal += OnMove;
+		_playerBase = GameObject.FindGameObjectWithTag (Tags.PLAYER).GetComponent<PlayerBase> ();
 	}
 
 	void OnMove(float value)
@@ -23,7 +26,9 @@ public class CreepMovement : MonoBehaviour {
 
 			}
 		}
-		transform.Translate( Vector3.back * value);
+		Vector3 creepMoveDirection = (_playerBase.transform.position.x <= transform.position.x) ? Vector3.back : Vector3.forward;
+		transform.Translate( creepMoveDirection * value * movementSpeed);
+
 	}
 
 	public void StopMove()
