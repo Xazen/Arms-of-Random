@@ -32,8 +32,13 @@ public class SoundManager : MonoBehaviour
 
 	[SerializeField] public AudioClip buttonClick;
 
-	private AudioSource _audioSource;
-	
+	private AudioSource[] _audioSource = new AudioSource[4];
+
+	public static int PLAYER = 0;
+	public static int ENEMY = 1;
+	public static int BOSS = 2;
+	public static int ENVIRONMENT = 3;
+
 	private static SoundManager _SoundManager;
 	public static SoundManager sharedManager
 	{
@@ -50,7 +55,11 @@ public class SoundManager : MonoBehaviour
 	{
 		if (_SoundManager == null) 
 		{
-			_audioSource = GameObject.FindGameObjectWithTag("SoundSource").GetComponent<AudioSource>();
+			AudioSource[] audioSources = GetComponents<AudioSource>();
+			_audioSource[0] = audioSources[0];
+			_audioSource[1] = audioSources[1];
+			_audioSource[2] = audioSources[2];
+			_audioSource[3] = audioSources[3];
 			_SoundManager = this;
 			DontDestroyOnLoad (this);
 		} 
@@ -63,18 +72,18 @@ public class SoundManager : MonoBehaviour
 		}
 	}
 
-	public void Play(AudioClip audioClip, bool loop = false)
+	public void Play(AudioClip audioClip, bool loop = false, int audioSourceIndex = 0)
 	{
-		_audioSource.loop = loop;
+		_audioSource[audioSourceIndex].loop = loop;
 
-		_audioSource.clip = audioClip;
-		_audioSource.Play();
+		_audioSource[audioSourceIndex].clip = audioClip;
+		_audioSource[audioSourceIndex].Play();
 	}
 
-	public void Stop()
+	public void Stop(int audioSourceIndex = 0)
 	{
-		if (_audioSource.isPlaying) {
-					_audioSource.Stop ();
+		if (_audioSource[audioSourceIndex].isPlaying) {
+			_audioSource[audioSourceIndex].Stop ();
 			}
 	}
 }
