@@ -8,4 +8,11 @@ public class ProjectileProperties : MonoBehaviour {
 	{
 		get{return _damage;}
 	}
+
+
+	void Update()
+	{
+
+		transform.Rotate(0,0,10);
+	}
 }

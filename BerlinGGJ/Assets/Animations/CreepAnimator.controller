@@ -66,7 +66,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: be934f3d45ade42d3bf60b3f4b58cf0a, type: 2}
   m_ParentStateMachine: {fileID: 110783492}
-  m_Position: {x: 372, y: -60, z: 0}
+  m_Position: {x: 480, y: -288, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -85,6 +85,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110277738
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: minionsbones.001|flying
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400004, guid: a2284a649edb94ce4b8841abae5bec6b, type: 3}
+  m_ParentStateMachine: {fileID: 110783492}
+  m_Position: {x: 442, y: 70, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1107 &110783492
 StateMachine:
   serializedVersion: 2
@@ -97,6 +112,7 @@ StateMachine:
   - {fileID: 110211790}
   - {fileID: 110211792}
   - {fileID: 110245142}
+  - {fileID: 110277738}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:

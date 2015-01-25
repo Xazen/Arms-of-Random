@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class WeaponController : MonoBehaviour {
@@ -12,51 +13,34 @@ public class WeaponController : MonoBehaviour {
 	void Start () {
 		_playerBase = GameObject.FindGameObjectWithTag(Tags.PLAYER).GetComponent<PlayerBase>();
 	}
-	
-	void Update()
-	{
-		if (Input.GetKeyDown (KeyCode.Z))
-		{
-			attack(0);
-		}
-		if (Input.GetKeyDown (KeyCode.X))
-		{
-			attack(1);
-		}
-		if (Input.GetKeyDown (KeyCode.C))
-		{
-			attack(2);
-		}
-		if (Input.GetKeyDown (KeyCode.V))
-		{
-			attack(3);
-		}
-//		if (Input.GetKeyDown (KeyCode.B))
-//		{
-//			attack(4);
-//		}
-	}
 
-	public void OnAttack(int weaponType)
+
+	public void OnAttack(ItemProperty itemProperty)
 	{
 		_playerBase.GetComponent<Animator>().Play("attack");
 		_actorBase = GetComponent<ActorBase> ();
 		_animator = _actorBase.GetComponent<Animator>();
 		_animator.Play("attack");
-		attack (weaponType);
-
+		attack (itemProperty);
 	}
 
 
-	void attack(int n)
+	void attack(ItemProperty itemProperty)
 	{
 		GameObject projectile;
 		Vector3 attackDirection = (_playerBase.PlayerMovement.goingLeft) ? Vector3.right : Vector3.left;
-		switch (n) {
+		switch (itemProperty.WeaponType) {
 		// shot
 		case 0:
 			SoundManager.sharedManager.Play(SoundManager.sharedManager.projectile1);
+
+			SpriteRenderer sr = _projectile.GetComponent<SpriteRenderer>();
+			sr.sprite = Resources.Load<Sprite>("Weapons/weapons_07");
+
+
 			projectile = (GameObject) Instantiate(_projectile, GameObject.Find("muzzle").transform.position, Quaternion.identity);
+
+
 			projectile.transform.constantForce.force = attackDirection * 100;
 			projectile.transform.Translate( Vector3.forward );
 			break;
