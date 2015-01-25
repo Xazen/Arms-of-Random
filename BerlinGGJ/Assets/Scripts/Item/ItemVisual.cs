@@ -19,7 +19,6 @@ public class ItemVisual : MonoBehaviour {
 
 	public void Update()
 	{
-		transform.Rotate (Vector3.up, spinningSpeed * Time.deltaTime);
 		anim = GetComponent<Animator> ();
 		if (!visible) 
 		{
