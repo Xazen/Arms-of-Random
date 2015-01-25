@@ -1,0 +1,140 @@
+fileFormatVersion: 2
+guid: a2284a649edb94ce4b8841abae5bec6b
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: flyer
+    100002: foot.L
+    100004: foot.L_end
+    100006: foot.R
+    100008: foot.R_end
+    100010: jumpy.L
+    100012: jumpy.R
+    100014: leg.L
+    100016: leg.R
+    100018: leg.R_end
+    100020: lowerleg.L
+    100022: lowerleg.R
+    100024: //RootNode
+    100026: minionsbones.001
+    100028: mouth_lower
+    100030: mouth_lower_end
+    100032: mouth_upper
+    100034: mouth_upper_end
+    100036: root
+    100038: tail
+    100040: tail_end
+    100042: tongue
+    100044: tongue 3
+    100046: tongue 3_end
+    100048: tongue2
+    100050: upperleg.L
+    100052: upperleg.R
+    100054: wing.L
+    100056: wing.R
+    100058: wing1.L
+    100060: wing1.R
+    100062: wing2.L
+    100064: wing2.R
+    100066: wing3.L
+    100068: wing3.L_end
+    100070: wing3.R
+    100072: wing3.R_end
+    400000: flyer
+    400002: foot.L
+    400004: foot.L_end
+    400006: foot.R
+    400008: foot.R_end
+    400010: jumpy.L
+    400012: jumpy.R
+    400014: leg.L
+    400016: leg.R
+    400018: leg.R_end
+    400020: lowerleg.L
+    400022: lowerleg.R
+    400024: //RootNode
+    400026: minionsbones.001
+    400028: mouth_lower
+    400030: mouth_lower_end
+    400032: mouth_upper
+    400034: mouth_upper_end
+    400036: root
+    400038: tail
+    400040: tail_end
+    400042: tongue
+    400044: tongue 3
+    400046: tongue 3_end
+    400048: tongue2
+    400050: upperleg.L
+    400052: upperleg.R
+    400054: wing.L
+    400056: wing.R
+    400058: wing1.L
+    400060: wing1.R
+    400062: wing2.L
+    400064: wing2.R
+    400066: wing3.L
+    400068: wing3.L_end
+    400070: wing3.R
+    400072: wing3.R_end
+    4300000: flyer
+    7400000: minionsbones.001|death.001
+    7400002: minionsbones.001|death_flyer
+    7400004: minionsbones.001|flying
+    7400006: minionsbones.001|jump
+    9500000: //RootNode
+    13700000: flyer
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
