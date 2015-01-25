@@ -125,7 +125,7 @@ public class UIController : MonoBehaviour
 	{
 //		Camera.main.GetComponent<BlurEffect>().enabled = true;
 		ContinueB.SetActive( true );
-		RestartB.SetActive( true );
+//		RestartB.SetActive( true );
 		Menu.SetActive( true );
 		lastState = state;
 		Time.timeScale = 0f;
