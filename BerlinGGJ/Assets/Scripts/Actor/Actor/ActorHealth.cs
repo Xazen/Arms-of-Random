@@ -11,12 +11,12 @@ public class ActorHealth : MonoBehaviour {
 
 	bool died = false;
 
-	private ActorBase _actorBase;
+	protected ActorBase _actorBase;
 
 	public delegate void HealthChanged(float oldValue, float newValue);
 	public event HealthChanged OnHealthChanged;
 
-	void Start()
+	protected void Start()
 	{
 		_actorBase = GetComponent<ActorBase> ();
 		_actorBase.ActorCollision.projectileCollision += OnProjectileCollision;
@@ -50,6 +50,16 @@ public class ActorHealth : MonoBehaviour {
 			OnHealthChanged (oldHp, _hp);
 		}
 		died = false;
+	}
+
+	public int HP()
+	{
+		return (int) _hp;
+	}
+
+	public int InitialHP()
+	{
+		return (int) _initialHP;
 	}
 
 	public void die()

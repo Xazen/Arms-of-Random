@@ -18,6 +18,12 @@ public class CreepVisual : ActorVisual {
 	{
 		if (newValue <= 0) 
 		{
+			if (gameObject.name == "Boss") {
+				SoundManager.sharedManager.Play (SoundManager.sharedManager.bossDeath, false, SoundManager.BOSS);
+			} else {
+
+				SoundManager.sharedManager.Play(SoundManager.sharedManager.enemyDeath, false, SoundManager.ENEMY);
+			}
 			_animator.Play("death");
 			_actorBase.GetComponent<CreepMovement>().StopMove();
 		}

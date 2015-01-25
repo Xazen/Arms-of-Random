@@ -14,7 +14,7 @@ public class CameraMovement : MonoBehaviour {
 	{
 		Vector3 newCameraPosition = this.transform.position;
 		newCameraPosition.x = position.x + 12;
-		newCameraPosition.y = position.y + 12;
+		newCameraPosition.y = position.y + 17;
 		this.transform.position = newCameraPosition;
 	}
 }

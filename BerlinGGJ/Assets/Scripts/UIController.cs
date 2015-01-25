@@ -43,7 +43,7 @@ public class UIController : MonoBehaviour
 	{
 		if( Menu == null ) Menu = GameObject.Find("EscapeMenu");
 		ContinueB = Menu.transform.Find("Canvas/ContinueButton").gameObject;
-		RestartB = Menu.transform.Find("Canvas/RestartButton").gameObject;
+		RestartB = Menu.transform.Find("Canvas/BackToMainMenu").gameObject;
 		Menu.SetActive( false );
 
 		for (int i = 0; i < slotCount; i++) {
@@ -125,7 +125,7 @@ public class UIController : MonoBehaviour
 	{
 //		Camera.main.GetComponent<BlurEffect>().enabled = true;
 		ContinueB.SetActive( true );
-		RestartB.SetActive( true );
+//		RestartB.SetActive( true );
 		Menu.SetActive( true );
 		lastState = state;
 		Time.timeScale = 0f;

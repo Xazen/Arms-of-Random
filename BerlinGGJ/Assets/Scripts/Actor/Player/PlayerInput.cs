@@ -14,8 +14,12 @@ public class PlayerInput : MonoBehaviour {
 	public InputDelegate jumpUp;
 	public InputDelegateWithInteger attack;
 	public InputDelegateWithValue moveHorizontal;
+	public InputDelegate stopMoveHorizontal;
+	public InputDelegate startMoveHorizontal;
 	public InputDelegateWithValue moveVertical;
 	public InputDelegateWithInteger number;
+
+	private bool isHorizontal = false;
 
 	// Use this for initialization
 	void Start () {
@@ -48,13 +52,31 @@ public class PlayerInput : MonoBehaviour {
 			}
 		}
 
-		if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.0f) 
-		{
-			if (moveHorizontal != null)
+		if (Mathf.Abs (Input.GetAxis ("Horizontal")) > 0.0f) {
+
+			if (!isHorizontal)
 			{
-				moveHorizontal(Input.GetAxis("Horizontal"));
+				isHorizontal = true;
+				if (startMoveHorizontal != null)
+				{
+					startMoveHorizontal();
+				}
+			}
+
+			if (moveHorizontal != null) {
+					moveHorizontal (Input.GetAxis ("Horizontal"));
+			}
+		} else {
+			if (isHorizontal)
+			{
+				isHorizontal = false;
+				if (stopMoveHorizontal != null)
+				{
+					stopMoveHorizontal();
+				}
 			}
 		}
+
 
 		if (Mathf.Abs (Input.GetAxis ("Vertical")) > 0.0f) 
 		{

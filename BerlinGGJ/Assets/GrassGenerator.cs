@@ -14,9 +14,9 @@ public class GrassGenerator : MonoBehaviour {
 		Object o  = Resources.Load("Grass/foilage1");
 		Debug.Log("");
 
-				for (int i = 0; i < _grassDensityAmount; i++) {
-	
-				}
+		for (int i = 0; i < _grassDensityAmount; i++) {
+
+		}
 
 
 	}

@@ -21,6 +21,10 @@ public class ActorCollision : MonoBehaviour {
 
 		if(collision.gameObject.tag == Tags.FLOOR)
 		{
+			if(gameObject.tag == Tags.PLAYER)
+			{
+				SoundManager.sharedManager.Play(SoundManager.sharedManager.playerLanding);
+			}
 			onFloor = true;
 		}else{
 			onFloor = false;
