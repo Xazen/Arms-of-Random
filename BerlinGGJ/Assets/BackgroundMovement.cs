@@ -13,7 +13,7 @@ public class BackgroundMovement : MonoBehaviour {
 	void OnPlayerPositionChanged(Vector3 position)
 	{
 		Vector3 newCameraPosition = this.transform.position;
-		newCameraPosition.x = (float) position.x * 1.5f + 12;
+		newCameraPosition.x = (float) position.x * (-1.02f) + 12;
 		this.transform.position = newCameraPosition;
 	}
 }
