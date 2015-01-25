@@ -32,6 +32,8 @@ public class ItemVisual : MonoBehaviour {
 
 	public void Disappear()
 	{
+		SoundManager.sharedManager.Play (SoundManager.sharedManager.itemCollect, false, SoundManager.ENVIRONMENT);
+
 		anim.SetTrigger("Disappear");
 		respawnTimer = 0;
 		visible = false;
@@ -40,6 +42,9 @@ public class ItemVisual : MonoBehaviour {
 
 	public void Appear()
 	{
+
+		SoundManager.sharedManager.Play (SoundManager.sharedManager.itemDrop, false, SoundManager.ENVIRONMENT);
+		
 		_itemBase.ItemController.Enable ();
 		anim.SetTrigger ("Appear");
 		visible = true;
