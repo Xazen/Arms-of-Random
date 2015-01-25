@@ -14,6 +14,5 @@ public class ParticleController : MonoBehaviour {
 	}
 
 	void OnParticleCollision (GameObject gameObject ){
-		Debug.Log("yay");
 	}
 }
