@@ -3,28 +3,28 @@ guid: 4fd51eb20a437b64fa6db5e73b045036
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - playerWalk: {fileID: 8300000, guid: 6800b3157c52839448b9ca89cb943847, type: 3}
-  - playerJump: {fileID: 8300000, guid: 3f3ee70f6d620cc40b2cb50ad8ee8bcb, type: 3}
-  - playerLanding: {instanceID: 0}
-  - playerDeath: {instanceID: 0}
-  - projectile1: {instanceID: 0}
-  - projectile2: {instanceID: 0}
-  - projectile3: {instanceID: 0}
-  - projectile4: {instanceID: 0}
-  - projectile5: {instanceID: 0}
-  - enemyWalk: {instanceID: 0}
-  - enemyJump: {instanceID: 0}
-  - enemyShoot: {instanceID: 0}
-  - enemyDeath: {instanceID: 0}
-  - bossWalk: {instanceID: 0}
-  - bossShoot1: {instanceID: 0}
-  - bossShoot2: {instanceID: 0}
-  - bossScream: {instanceID: 0}
-  - bossAmbient: {instanceID: 0}
-  - bossDeath: {instanceID: 0}
-  - itemDrop: {instanceID: 0}
-  - itemCollect: {instanceID: 0}
-  - buttonClick: {instanceID: 0}
+  - playerWalk: {fileID: 8300000, guid: 7dd2d26623337ef4e84764beb0e6fc78, type: 3}
+  - playerJump: {fileID: 8300000, guid: 7dd5bb76f8720db488f13ae51ecbbad4, type: 3}
+  - playerLanding: {fileID: 8300000, guid: d3f94dac0a969354eb1a97b12e01c13f, type: 3}
+  - playerDeath: {fileID: 8300000, guid: eec0d626e03aa0a4693ea91ef3cdde7f, type: 3}
+  - projectile1: {fileID: 8300000, guid: 96f2ab015e8521c4d83e5c88c2b89495, type: 3}
+  - projectile2: {fileID: 8300000, guid: b9c7a55da99b67443af154cf9f7d7cf3, type: 3}
+  - projectile3: {fileID: 8300000, guid: d9b0837e43ce2fd4d8a840172e788767, type: 3}
+  - projectile4: {fileID: 8300000, guid: 6845363dbdd5cd9409f2e732b655edc1, type: 3}
+  - projectile5: {fileID: 8300000, guid: 0d24b61e207f55a46aeebb8a68fb4823, type: 3}
+  - enemyWalk: {fileID: 8300000, guid: a8aeaaad97dbe424fa96105597727b8a, type: 3}
+  - enemyJump: {fileID: 8300000, guid: 84b4a2481447b4d4f8962dc45dbdac98, type: 3}
+  - enemyShoot: {fileID: 8300000, guid: a60f57650c898aa4e898da130a111b54, type: 3}
+  - enemyDeath: {fileID: 8300000, guid: 0ab7d2c98c5224b4b9064cc0df04cdc7, type: 3}
+  - bossWalk: {fileID: 8300000, guid: 505d7a285829ba743926609ea98310ab, type: 3}
+  - bossShoot1: {fileID: 8300000, guid: f9c42c8460cd3884f923f7f0b0acc133, type: 3}
+  - bossShoot2: {fileID: 8300000, guid: d0fa4e942640ae4498ed8cfa93b92f81, type: 3}
+  - bossScream: {fileID: 8300000, guid: 112603ea6b2ebc54cabb1dc182f9fc9c, type: 3}
+  - bossAmbient: {fileID: 8300000, guid: 65407ca6192a16341be0bd83a5e5f007, type: 3}
+  - bossDeath: {fileID: 8300000, guid: 09b5fd9943d3bc346a90ba5f2d1638bb, type: 3}
+  - itemDrop: {fileID: 8300000, guid: 0e53a1b4cb8abc340ba7bd089b63610b, type: 3}
+  - itemCollect: {fileID: 8300000, guid: 292af2130544acd48beb3b4cbbd4fd25, type: 3}
+  - buttonClick: {fileID: 8300000, guid: 4189b0013553a6b47a09079c60ab32de, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

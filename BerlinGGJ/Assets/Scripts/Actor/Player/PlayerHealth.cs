@@ -16,8 +16,11 @@ public class PlayerHealth : ActorHealth {
 
 	void OnCollisionEnter(Collision collision)
 	{
-		decreaseHP (1);
-		healthBar.fillAmount = HP() * 0.1f;
+		if (collision.gameObject.tag == Tags.PROJECTILE || collision.gameObject.tag == Tags.CREEP)
+		{
+			decreaseHP (1);
+			healthBar.fillAmount = HP() * 0.1f;
+		}
 	}
 
 }

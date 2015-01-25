@@ -25,7 +25,8 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		_playerBase = GetComponent<PlayerBase> ();
 		_playerBase.PlayerInput.jumpDown += OnJumpDown;
-//		_playerBase.PlayerInput.jumpUp += OnJumpUp;
+		_playerBase.PlayerInput.stopMoveHorizontal += OnStopMove;
+		_playerBase.PlayerInput.startMoveHorizontal += OnStartMove;
 		_playerBase.PlayerInput.moveHorizontal += OnMove;
 	}
 
@@ -53,7 +54,18 @@ public class PlayerMovement : MonoBehaviour {
 
 	void jump ()
 	{
+		SoundManager.sharedManager.Play (SoundManager.sharedManager.playerJump);
 		transform.rigidbody.AddForce (Vector3.up * _jumpHeight);
+	}
+
+	void OnStartMove()
+	{
+		SoundManager.sharedManager.Play (SoundManager.sharedManager.playerWalk, true);
+	}
+
+	void OnStopMove()
+	{
+		SoundManager.sharedManager.Stop ();
 	}
 
 	void OnMove(float value)

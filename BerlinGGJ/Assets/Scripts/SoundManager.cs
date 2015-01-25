@@ -4,33 +4,33 @@ using System.Collections;
 public class SoundManager : MonoBehaviour 
 {
 
-	[SerializeField] private AudioClip playerWalk;
-	[SerializeField] private AudioClip playerJump;
-	[SerializeField] private AudioClip playerLanding;
-	[SerializeField] private AudioClip playerDeath;
+	[SerializeField] public AudioClip playerWalk;
+	[SerializeField] public AudioClip playerJump;
+	[SerializeField] public AudioClip playerLanding;
+	[SerializeField] public AudioClip playerDeath;
 
-	[SerializeField] private AudioClip projectile1;
-	[SerializeField] private AudioClip projectile2;
-	[SerializeField] private AudioClip projectile3;
-	[SerializeField] private AudioClip projectile4;
-	[SerializeField] private AudioClip projectile5;
+	[SerializeField] public AudioClip projectile1;
+	[SerializeField] public AudioClip projectile2;
+	[SerializeField] public AudioClip projectile3;
+	[SerializeField] public AudioClip projectile4;
+	[SerializeField] public AudioClip projectile5;
 
-	[SerializeField] private AudioClip enemyWalk;
-	[SerializeField] private AudioClip enemyJump;
-	[SerializeField] private AudioClip enemyShoot;
-	[SerializeField] private AudioClip enemyDeath;
+	[SerializeField] public AudioClip enemyWalk;
+	[SerializeField] public AudioClip enemyJump;
+	[SerializeField] public AudioClip enemyShoot;
+	[SerializeField] public AudioClip enemyDeath;
 
-	[SerializeField] private AudioClip bossWalk;
-	[SerializeField] private AudioClip bossShoot1;
-	[SerializeField] private AudioClip bossShoot2;
-	[SerializeField] private AudioClip bossScream;
-	[SerializeField] private AudioClip bossAmbient;
-	[SerializeField] private AudioClip bossDeath;
+	[SerializeField] public AudioClip bossWalk;
+	[SerializeField] public AudioClip bossShoot1;
+	[SerializeField] public AudioClip bossShoot2;
+	[SerializeField] public AudioClip bossScream;
+	[SerializeField] public AudioClip bossAmbient;
+	[SerializeField] public AudioClip bossDeath;
 
-	[SerializeField] private AudioClip itemDrop;
-	[SerializeField] private AudioClip itemCollect;
+	[SerializeField] public AudioClip itemDrop;
+	[SerializeField] public AudioClip itemCollect;
 
-	[SerializeField] private AudioClip buttonClick;
+	[SerializeField] public AudioClip buttonClick;
 
 	private AudioSource _audioSource;
 	
@@ -50,7 +50,7 @@ public class SoundManager : MonoBehaviour
 	{
 		if (_SoundManager == null) 
 		{
-			_audioSource = GameObject.FindGameObjectWithTag(Tags.GAMECONTROLLER).GetComponent<AudioSource>();
+			_audioSource = GameObject.FindGameObjectWithTag("SoundSource").GetComponent<AudioSource>();
 			_SoundManager = this;
 			DontDestroyOnLoad (this);
 		} 
@@ -63,11 +63,18 @@ public class SoundManager : MonoBehaviour
 		}
 	}
 
-	public void Play(AudioClip audioClip, bool loop)
+	public void Play(AudioClip audioClip, bool loop = false)
 	{
 		_audioSource.loop = loop;
 
 		_audioSource.clip = audioClip;
 		_audioSource.Play();
+	}
+
+	public void Stop()
+	{
+		if (_audioSource.isPlaying) {
+					_audioSource.Stop ();
+			}
 	}
 }
