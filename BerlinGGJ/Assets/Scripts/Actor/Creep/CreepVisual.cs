@@ -26,6 +26,8 @@ public class CreepVisual : ActorVisual {
 			}
 			_animator.Play("death");
 			_actorBase.GetComponent<CreepMovement>().StopMove();
+			_actorBase.GetComponent<BoxCollider>().enabled = false;
+			_actorBase.GetComponent<ParticleSystem>().Stop();
 		}
 	}
 
