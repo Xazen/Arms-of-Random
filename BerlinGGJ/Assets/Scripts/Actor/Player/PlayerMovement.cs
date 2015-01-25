@@ -58,6 +58,11 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		SoundManager.sharedManager.Play (SoundManager.sharedManager.playerJump);
 		transform.rigidbody.AddForce (Vector3.up * _jumpHeight);
+
+		if (OnPositionChanged != null)
+		{
+			OnPositionChanged(transform.position);
+		}
 	}
 
 	void OnStartMove()
@@ -72,29 +77,27 @@ public class PlayerMovement : MonoBehaviour {
 
 	void OnMove(float value)
 	{
-		Vector3 newPosition = transform.position;
-		newPosition.x += _speed * Time.deltaTime * value;
-		transform.position = newPosition;
+		if (!_playerBase.ActorHealth.isDead ()) {
+			Vector3 newPosition = transform.position;
+			newPosition.x += _speed * Time.deltaTime * value;
+			transform.position = newPosition;
 
-		if(value<0)
-		{
-			if(goingLeft)
-			{
-				transform.Rotate(0,180,0);
+			if (value < 0) {
+					if (goingLeft) {
+							transform.Rotate (0, 180, 0);
+					}
+					goingLeft = false;
+			} else {
+
+					if (!goingLeft) {
+							transform.Rotate (0, 180, 0);
+					}
+					goingLeft = true;
 			}
-			goingLeft = false;
-		}else {
 
-			if(!goingLeft)
-			{
-				transform.Rotate(0,180,0);
+			if (OnPositionChanged != null) {
+					OnPositionChanged (newPosition);
 			}
-			goingLeft = true;
-		}
-
-		if (OnPositionChanged != null)
-		{
-			OnPositionChanged(newPosition);
 		}
 	}
 }

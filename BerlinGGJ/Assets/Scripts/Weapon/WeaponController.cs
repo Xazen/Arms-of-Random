@@ -34,12 +34,12 @@ public class WeaponController : MonoBehaviour {
 		case 0:
 			SoundManager.sharedManager.Play(SoundManager.sharedManager.projectile1);
 
+			SpriteRenderer sr = _projectile.GetComponent<SpriteRenderer>();
+			sr.sprite = Resources.Load<Sprite>("Weapons/weapons_07");
 
 
 			projectile = (GameObject) Instantiate(_projectile, GameObject.Find("muzzle").transform.position, Quaternion.identity);
 
-			SpriteRenderer sr = _projectile.GetComponent<SpriteRenderer>();
-			sr.sprite = Resources.Load<Sprite>("Weapons/weapons_04");
 
 			projectile.transform.constantForce.force = attackDirection * 100;
 			projectile.transform.Translate( Vector3.forward );

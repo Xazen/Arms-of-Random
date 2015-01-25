@@ -41,6 +41,11 @@ public class ActorHealth : MonoBehaviour {
 		}
 	}
 
+	public bool isDead()
+	{
+		return died;
+	}
+
 	public void resetHP()
 	{
 		float oldHp = _hp;

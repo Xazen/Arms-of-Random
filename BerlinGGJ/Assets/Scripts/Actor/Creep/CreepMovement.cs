@@ -29,7 +29,7 @@ public class CreepMovement : MonoBehaviour {
 			}
 		}
 		Vector3 creepMoveDirection = (_playerBase.transform.position.x <= transform.position.x) ? Vector3.back : Vector3.forward;
-		transform.Translate( creepMoveDirection * value * movementSpeed);
+		transform.Translate( creepMoveDirection * movementSpeed);
 
 		if(creepMoveDirection == Vector3.forward)
 		{

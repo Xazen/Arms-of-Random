@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotImage: {fileID: 2800000, guid: 44e96c812c14d89479bcc2308514317e, type: 3}
+  itemId: 3
   posessionCount: 0
   initialUses: 2
 --- !u!114 &11442934
