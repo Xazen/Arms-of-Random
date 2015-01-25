@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour {
 
 
 	bool inAir = false;
-	bool secondJump = true;
+	bool secondJump = false;
 
 	public bool goingLeft = true;
 
@@ -37,17 +37,19 @@ public class PlayerMovement : MonoBehaviour {
 		}else{
 			inAir = true;
 		}
+		Debug.Log(inAir);
 	}
 
 	void OnJumpDown ()
 	{
-		if(!inAir){
-			jump ();
-			secondJump = true;
-		}
 		if(inAir && secondJump)
 		{
 			jump();
+			secondJump = false;
+		}else if(!inAir){
+			jump ();
+			secondJump = true;
+		}else{
 			secondJump = false;
 		}
 	}

@@ -16,7 +16,7 @@ public class ItemController : MonoBehaviour {
 	{
 		if (_itemBase.ItemProperty.CanUseItem ()) 
 		{
-			_playerBase.WeaponController.OnAttack(_itemBase.ItemProperty.WeaponType);
+			_playerBase.WeaponController.OnAttack(_itemBase.ItemProperty);
 		}
 	}
 

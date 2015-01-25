@@ -7,6 +7,7 @@ public class ItemProperty : MonoBehaviour {
 	[SerializeField] private Texture slotImage;
 	[SerializeField] private int posessionCount = 0;
 	[SerializeField] private int initialUses = 2;
+
 	public int WeaponType { get; set; }
 
 	void Start()
@@ -36,4 +37,9 @@ public class ItemProperty : MonoBehaviour {
 	{
 		return slotImage;
 	}
+
+//	public Sprite SpriteImage()
+//	{
+//		return transform.
+//	}
 }
