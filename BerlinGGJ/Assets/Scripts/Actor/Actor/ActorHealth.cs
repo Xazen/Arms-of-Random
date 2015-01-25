@@ -80,5 +80,6 @@ public class ActorHealth : MonoBehaviour {
 	void OnParticleCollision (GameObject gameObject ){
 		GameObject.FindWithTag(Tags.CAMERAHOLDER).GetComponent<CameraRumbler>().rumble(0.1f, 0.2f);
 		decreaseHP (5);
+		Destroy(gameObject);
 	}
 }

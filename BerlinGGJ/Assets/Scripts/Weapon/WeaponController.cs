@@ -35,7 +35,7 @@ public class WeaponController : MonoBehaviour {
 			SoundManager.sharedManager.Play(SoundManager.sharedManager.projectile1);
 
 			SpriteRenderer sr = _projectile.GetComponent<SpriteRenderer>();
-			sr.sprite = Resources.Load<Sprite>("Weapons/weapons_07");
+			sr.sprite = Resources.Load<Sprite>("Weapons/weapons_0" + itemProperty.ItemId);
 
 
 			projectile = (GameObject) Instantiate(_projectile, GameObject.Find("muzzle").transform.position, Quaternion.identity);
@@ -54,7 +54,9 @@ public class WeaponController : MonoBehaviour {
 		// flame thrower
 		case 2:
 			SoundManager.sharedManager.Play(SoundManager.sharedManager.projectile1);
+			GameObject.Find("muzzle/fire_spray").GetComponent<ParticleSystem>();
 			GameObject.Find("muzzle/fire_spray").GetComponent<ParticleSystem>().Play(); 
+
 			break;
 		// rocket launcher
 		case 3:
