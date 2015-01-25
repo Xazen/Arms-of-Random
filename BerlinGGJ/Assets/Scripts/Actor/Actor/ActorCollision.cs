@@ -17,6 +17,8 @@ public class ActorCollision : MonoBehaviour {
 				ProjectileBase projectileBase = collision.gameObject.GetComponent<ProjectileBase>();
 				projectileCollision(projectileBase);
 			}
+			Destroy ( collision.gameObject );
+			
 		}
 
 		if(collision.gameObject.tag == Tags.FLOOR)
